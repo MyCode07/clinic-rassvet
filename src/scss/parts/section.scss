@@ -1,0 +1,197 @@
+.section {
+    // .section__container
+
+    &__container {
+    }
+
+    // .section__body
+
+    &__body {
+    }
+
+    // .section__top
+
+    &__top {
+        @include adaptive-value("margin-bottom", 40, 10, 1);
+
+        &._center {
+            @media (min-width: 1024px) {
+                text-align: center;
+            }
+        }
+
+        &._accent {
+            color: $accent;
+        }
+    }
+
+    // .section__linear
+
+    &__linear {
+        padding: 53px 0;
+        color: $white;
+        background: $linear;
+        margin-bottom: 87px;
+    }
+}
+
+.intro {
+    @include adaptive-value("padding-top", 116, 32, 1);
+    @include adaptive-value("padding-bottom", 121, 32, 1);
+    background-color: rgba($color: #7fcefb, $alpha: 0.32);
+
+    p {
+        @include adaptive-value("font-size", 22, 10, 1);
+        color: #000;
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+
+            @media (max-width: 1024px) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+.params {
+    @include adaptive-value('margin-bottom', 123, 39, 1);
+    
+    // .params-flex
+
+    &-flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        // .params-flex__image
+
+        &__image {
+            display: flex;
+            justify-content: space-between;
+            flex: 0 0 auto;
+            width: 100%;
+            width: 477px;
+
+            ol {
+                margin-top: 227px;
+                max-width: 203px;
+                position: relative;
+                z-index: 1;
+
+                & > :not(:last-child) {
+                    margin-bottom: 8px;
+                }
+
+                & > :nth-child(3) {
+                    margin-top: 26px;
+                }
+
+                li {
+                    & > :first-child {
+                        font-weight: 600;
+                    }
+
+                    img {
+                        max-width: none;
+                    }
+
+                    span {
+                        display: block;
+                    }
+
+                    &#params-brest {
+                        img {
+                            width: 323px + 5px;
+                            margin-bottom: -10px;
+                            margin-top: 2px;
+                        }
+                    }
+                    &#params-waise {
+                        img {
+                            width: 347px + 5px;
+                            margin-top: 1px;
+                            margin-bottom: -9px;
+                        }
+                    }
+                    &#params-wrist {
+                        img {
+                            width: 271px + 5px;
+                            margin-top: 1px;
+                            margin-bottom: -9px;
+                        }
+                    }
+                    &#params-hips {
+                        img {
+                            width: 305px + 5px;
+                            margin-top: -24px;
+                        }
+                    }
+                }
+            }
+
+            .img {
+                flex: 0 0 auto;
+
+                img {
+                    width: 209px;
+                    height: 880px;
+                }
+            }
+        }
+
+        // .params-flex__content
+
+        &__content {
+            flex: 1 1 auto;
+            max-width: 652px;
+            margin-top: 34px;
+        }
+    }
+
+    // .params-info
+
+    &-info {
+        grid-column: span 2;
+        overflow: visible;
+
+        margin-top: 40px;
+        margin-left: 40px;
+
+        .params-item__wrap {
+            padding: 30px 60px;
+        }
+
+        span {
+            display: block;
+            color: $blue;
+            font-weight: 600;
+            line-height: 1.28;
+            margin-bottom: 13px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.44;
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    // .params-text
+
+    &-text {
+        margin-top: 33px;
+        color: #7f7f7f;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+    }
+}

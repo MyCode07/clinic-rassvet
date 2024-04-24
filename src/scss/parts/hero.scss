@@ -1,0 +1,192 @@
+.hero {
+    position: relative;
+    padding-top: 81px;
+    padding-bottom: 180px;
+    color: $white;
+
+    @media (max-width: 1024px) {
+        padding-top: 74px;
+        @include adaptive-value("padding-bottom", 100, 31, 1);
+    }
+
+    // .hero__bgi
+
+    &__bgi {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        img,
+        picture {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &:before,
+        &:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        &:before {
+            background: $linear;
+            z-index: -1;
+        }
+
+        &:after {
+            background-color: rgba($color: $accent, $alpha: 0.1);
+            backdrop-filter: blur(2.299999952316284px);
+        }
+    }
+
+    // .hero__container
+
+    &__container {
+    }
+
+    // .hero__body
+
+    &__body {
+        position: relative;
+        z-index: 1;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        @media (min-width: 1025px) {
+            @include adaptive-value("margin-top", 115, 50, 1);
+        }
+    }
+
+    // .hero__patient
+
+    &__patient {
+        border: 2px solid rgba($color: $white, $alpha: 0.2);
+        background-color: rgba($color: $white, $alpha: 0.1);
+        padding: 20px 26px;
+        font-weight: 500;
+        line-height: 1.45;
+        width: fit-content;
+
+        margin-top: 50px;
+        margin-bottom: 43px;
+
+        @include adaptive-value("border-radius", 20, 10, 1);
+
+        @media (max-width: 1024px) {
+            padding: 10px 15px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border-width: 1px;
+            line-height: 1.2;
+        }
+
+        // .hero__patient-name
+
+        &-name {
+            display: block;
+            @include adaptive-value("font-size", 24, 12, 1);
+        }
+
+        // .hero__patient-age
+
+        &-age {
+            display: block;
+
+            @include adaptive-value("font-size", 16, 12, 1);
+            @include adaptive-value("margin-top", 8, 0, 1);
+        }
+    }
+
+    // .hero__author
+
+    &__author {
+        // .hero__author-name
+
+        &-name {
+            display: block;
+            font-weight: 600;
+            line-height: 1.166;
+
+            @include adaptive-value("font-size", 24, 12, 1);
+
+            @media (max-width: 1024px) {
+                span {
+                    margin-bottom: 4px;
+                    display: block;
+                    color: #79dbff;
+                    @include adaptive-value("font-size", 24, 10, 1);
+
+                    &:after {
+                        content: ":";
+                    }
+                }
+            }
+        }
+
+        // .hero__author-info
+
+        &-info {
+            max-width: 540px;
+            display: block;
+            margin-top: 8px;
+
+            color: rgba($color: $white, $alpha: 0.67);
+            line-height: 1.4;
+
+            @include adaptive-value("font-size", 20, 10, 1);
+
+            @media (max-width: 1024px) {
+                line-height: 1.2;
+            }
+        }
+    }
+
+    // .hero__date
+
+    &__date {
+        color: rgba($color: #f6f1f1, $alpha: 84);
+
+        font-size: 14px;
+        line-height: 1.07;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+
+        & > :not(:last-child) {
+            margin-bottom: 8px;
+
+            @media (max-width: 1024px) {
+                margin-bottom: 4px;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            order: -1;
+            margin-left: auto;
+        }
+
+        @media (max-width: 1024px) {
+            margin-top: 120px;
+            align-items: center;
+            text-align: center;
+
+            @include adaptive-value("font-size", 14, 8, 1);
+        }
+
+        span {
+            display: block;
+        }
+    }
+}

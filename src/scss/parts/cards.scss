@@ -1,0 +1,97 @@
+.params-item {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+    background: $linear;
+    padding: 2px;
+    border-radius: 20px;
+
+    // .params-item__wrap
+
+    &__wrap {
+        border-radius: 20px;
+        background: $white;
+    }
+
+    // .params-item__flex
+
+    &__flex {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    // .params-item__left
+
+    &__left {
+        padding: 18px 35px 18px 25px;
+        background: $linear;
+        border-radius: 20px 60px 60px 20px;
+        margin: -2px;
+    }
+
+    .icon {
+        width: 72px;
+        height: 72px;
+        flex: 0 0 auto;
+
+        border-radius: 50%;
+        background: $linear;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        backdrop-filter: blur(9px);
+
+        img,
+        svg {
+            width: 39px;
+            height: 39px;
+            flex: 0 0 auto;
+            fill: $white;
+        }
+    }
+
+    // .params-item__right
+
+    &__right {
+        text-align: center;
+        flex: 1 1 auto;
+        padding-right: 20px;
+        line-height: 1;
+
+        label {
+            color: $blue;
+            font-weight: 600;
+            display: block;
+        }
+
+        span {
+            margin-top: 9px;
+            display: block;
+        }
+    }
+
+    // .params-item__extra
+
+    &__extra {
+        padding: 20px 20px 30px 14px;
+        line-height: 1;
+
+        & > :not(:last-child) {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+        }
+
+        span {
+            display: block;
+            margin-top: 8px;
+            font-size: 18px;
+        }
+    }
+}

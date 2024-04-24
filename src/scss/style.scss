@@ -1,0 +1,53 @@
+// null default styles
+@import "null";
+
+// load fonts
+@import "fonts";
+
+//load variables
+@import "common/variables";
+
+// load mixins
+@import "mixins";
+
+// load swiper
+// @import "../../node_modules/swiper/swiper";
+
+// load fancybox
+// @import "../../node_modules/@fancyapps/ui/dist/fancybox/fancybox";
+
+// load common
+@import "common/common";
+
+// load header
+@import "common/header";
+
+// load footer
+@import "common/footer";
+
+// load footer
+@import "common/menu";
+
+// load accordeon
+@import "common/accordeon";
+
+// load error 404
+@import "common/404";
+
+// load to top
+@import "common/to-top";
+
+// load form
+@import "common/form";
+
+// load grid
+@import "parts/grid";
+
+// load hero
+@import "parts/hero";
+
+// load section
+@import "parts/cards";
+
+// load section
+@import "parts/section";

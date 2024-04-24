@@ -1,0 +1,227 @@
+@@include('./html/head.html', {
+"title":"Главная",
+})
+
+@@include('./html/header.html')
+
+<main>
+
+    <section class="hero">
+        <div class="hero__bgi">
+            <img src="img/hero.png" alt="">
+        </div>
+        <div class="hero__container _container">
+            <div class="hero__body">
+                <h1>Персональный отчёт <br> и рекомендации
+                    <span>по состоянию здоровья и питанию</span>
+                </h1>
+                <div class="hero__patient">
+                    <span class="hero__patient-name">Константинопольский Константин Константинович</span>
+                    <span class="hero__patient-age">38 лет</span>
+                </div>
+                <div class="hero__author">
+                    <span class="hero__author-name">
+                        <span>Составил</span> Лопаткин Андрей Юрьевич
+                    </span>
+                    <span class="hero__author-info">Врач-гепатолог, нутрициолог, диабетолог, к. м. н., заведующий
+                        отделением гастроэнтерологии
+                        клиники «Рассвет» в СЗО</span>
+                </div>
+                <div class="hero__date">
+                    <span>г. Санкт-Петербург</span>
+                    <time>20.20.2022</time>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section intro">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__top _center _accent">
+                    <h2>Уважаемый Константин Константинович</h2>
+                </div>
+                <div>
+                    <p>Перед вами ваш персональный отчёт. Это важный шаг на пути к сбалансированному питанию, здоровью и
+                        профилактике
+                        заболеваний.</p>
+                    <p>Рацион и рекомендации разработаны строго под вашу ситуацию. Поэтому они помогут безопасно и
+                        комфортно
+                        достичь вашу цель.</p>
+                    <p>Вся информация в этой «мини-книге» учитывает ваши индивидуальные параметры, пищевые предпочтения,
+                        активность, состояние
+                        здоровья и запрос по массе тела. Кроме того, вся аналитика, меню и рекомендации в отчёте созданы
+                        строго
+                        на основе
+                        современных научных данных.</p>
+                    <p>Приятного изучения и применения!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section params">
+        <div class="section__linear">
+            <div class="_container">
+                <h2>Параметры и состав тела</h2>
+            </div>
+        </div>
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="params-flex">
+                    <div class="params-flex__image">
+                        <ol>
+                            <li id="params-brest">
+                                <span>Грудь</span>
+                                <img src="img/icons/brest.svg" alt="">
+                                <span>88 см</span>
+                            </li>
+                            <li id="params-waise">
+                                <span>Талия</span>
+                                <img src="img/icons/waist.svg" alt="">
+                                <span>62 см</span>
+                            </li>
+                            <li id="params-wrist">
+                                <span>Запястье</span>
+                                <img src="img/icons/wrist.svg" alt="">
+                                <span>14,4 см</span>
+                            </li>
+                            <li id="params-hips">
+                                <span>Бёдра</span>
+                                <img src="img/icons/hips.svg" alt="">
+                                <span>96 см</span>
+                            </li>
+                        </ol>
+                        <div class="img">
+                            <img src="img/icons/model.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="params-flex__content">
+                        <div class="grid grid-2">
+                            <div class="params-item">
+                                <div class="params-item__wrap">
+                                    <div class="params-item__flex">
+                                        <div class="params-item__left">
+                                            <div class="icon">
+                                                <svg width="39" height="39" viewBox="0 0 39 39">
+                                                    <use xlink:href='img/svg/icons.svg#mass' />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="params-item__right">
+                                            <label>Масса тела</label>
+                                            <span>57 кг</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="params-item">
+                                <div class="params-item__wrap">
+                                    <div class="params-item__flex">
+                                        <div class="params-item__left">
+                                            <div class="icon">
+                                                <svg width="44" height="45" viewBox="0 0 44 45">
+                                                    <use xlink:href='img/svg/icons.svg#height' />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="params-item__right">
+                                            <label>Рост</label>
+                                            <span>158 см</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="params-item">
+                                <div class="params-item__wrap">
+                                    <div class="params-item__flex">
+                                        <div class="params-item__left">
+                                            <div class="icon">
+                                                <svg width="48" height="48" viewBox="0 0 48 48">
+                                                    <use xlink:href='img/svg/icons.svg#imt' />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="params-item__right">
+                                            <label>ИМТ</label>
+                                            <span>22.8</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="params-item">
+                                <div class="params-item__wrap">
+                                    <div class="params-item__flex">
+                                        <div class="params-item__left">
+                                            <div class="icon">
+                                                <svg width="48" height="49" viewBox="0 0 48 49">
+                                                    <use xlink:href='img/svg/icons.svg#metabolizm' />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="params-item__right">
+                                            <label>Базовый метаболизм</label>
+                                            <span>1300 ккал</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="params-item">
+                                <div class="params-item__wrap">
+                                    <div class="params-item__flex">
+                                        <div class="params-item__left">
+                                            <div class="icon">
+                                                <svg width="48" height="49" viewBox="0 0 48 49">
+                                                    <use xlink:href='img/svg/icons.svg#metabolizm' />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="params-item__right">
+                                            <label>Уровень активности</label>
+                                        </div>
+                                    </div>
+                                    <div class="params-item__extra">
+                                        <p>
+                                            <label>Профессия</label>
+                                            <span>Работник преимущественно умственного труда</span>
+                                        </p>
+                                        <p>
+                                            <label>Спорт</label>
+                                            <span>Регулярный спорт</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="params-item params-info">
+                                <div class="params-item__wrap">
+                                    <div class="icon">
+                                        <svg width="48" height="48" viewBox="0 0 48 48">
+                                            <use xlink:href='img/svg/icons.svg#info' />
+                                        </svg>
+                                    </div>
+                                    <span>Комментарии</span>
+                                    <p>Ваше тело содержит 24% жира, это указывает на хорошую физическую форму.
+                                        Показатель
+                                        ИМТ соответствует нормальной массе
+                                        тела. Дополнительные индексы указывают на: отложение жировых запасов
+                                        преимущественно
+                                        на ягодицах и бёдрах и астенический
+                                        тип телосложения (склонность к худобе от природы). Ваш идеальный вес равен
+                                        51 кг.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="params-text">
+                    * Вам рекомендуется провести анализ состава тела с помощью биоимпеданса, калипера или DEXA-сканера.
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')
