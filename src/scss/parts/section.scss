@@ -335,8 +335,9 @@
             justify-content: center;
             gap: 8px;
 
-            font-size: 14px;
             line-height: 1.12;
+
+            @include adaptive-value("font-size", 14, 10, 1);
 
             & > :first-child {
                 display: block;
@@ -344,6 +345,11 @@
                 width: 18px;
                 height: 18px;
                 border-radius: 50%;
+
+                @media (max-width: 768px) {
+                    width: 12px;
+                    height: 12px;
+                }
             }
         }
     }
@@ -525,8 +531,15 @@
         }
 
         &__extra {
+            line-height: normal;
+
+            @media (min-width: 769px) {
+                padding: 20px 30px;
+            }
+
             @media (max-width: 768px) {
                 padding-top: 12px;
+                padding-bottom: 12px;
             }
 
             label {
@@ -559,5 +572,217 @@
                 }
             }
         }
+    }
+}
+
+.nutrition {
+    @include adaptive-value("margin-bottom", 120, 30, 1);
+
+    .section__linear {
+        @include adaptive-value("margin-bottom", 140, 30, 1);
+    }
+
+    // .nutrition-title
+
+    &-title {
+        display: block;
+
+        @include adaptive-value("margin-bottom", 60, 25, 1);
+        @include adaptive-value("font-size", 22, 12, 1);
+
+        & > :first-child {
+            font-weight: 600;
+            color: $blue;
+        }
+    }
+
+    .section__body > .grid {
+        max-width: 1100px;
+        margin-inline: auto;
+        gap: 0;
+    }
+
+    .results {
+        &-compare {
+            justify-content: flex-start;
+
+            @include adaptive-value("margin-bottom", 20, 10, 1);
+        }
+    }
+
+    .params-item {
+        @include adaptive-value("margin-bottom", 60, 25, 1);
+
+        &__flex {
+            background: linear-gradient(90deg, rgba(29, 189, 245, 0.16) 0%, rgba(15, 51, 87, 0) 100%);
+
+            @media (min-width: 769px) {
+                gap: 20px;
+            }
+        }
+
+        &__left {
+            border-bottom-left-radius: 0;
+
+            @media (min-width: 769px) {
+                padding: 9px 24px 9px 18px;
+            }
+        }
+
+        .icon {
+            @media (min-width: 769px) {
+                width: 50px;
+                height: 50px;
+
+                img,
+                svg {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+
+        &__right {
+            text-align: left;
+
+            @media (max-width: 768px) {
+                line-height: normal;
+            }
+        }
+
+        &__text {
+            @include adaptive-value("padding", 30, 12, 1);
+        }
+    }
+
+    .fluid-amount {
+        // .fluid-amount__result
+
+        &__result {
+            display: flex;
+            justify-content: space-around;
+            gap: 40px;
+            margin-top: 15px;
+            max-width: 640px;
+
+            font-weight: 600;
+            line-height: 1;
+            color: $accent;
+
+            @include adaptive-value("font-size", 16, 10, 1);
+
+            @media (max-width: 768px) {
+                line-height: normal;
+                margin-top: 4px;
+                justify-content: space-between;
+                gap: 20px;
+            }
+
+            .red {
+                color: $red;
+            }
+        }
+
+        &__patient {
+        }
+
+        // .fluid-amount__norma
+
+        &__norma {
+        }
+    }
+
+    .calorie-distribution {
+        // .calorie-distribution__flex
+
+        &__flex {
+            display: flex;
+            text-align: center;
+
+            time {
+                display: block;
+                color: $white;
+                line-height: 0.87;
+                border-radius: 100px;
+                background-color: $blue;
+                text-align: center;
+                padding: 6px;
+
+                @include adaptive-value("font-size", 18, 10, 1);
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @media (max-width: 768px) {
+                    line-height: normal;
+                }
+            }
+
+            span {
+                display: block;
+                line-height: 0.75;
+
+                @include adaptive-value("font-size", 20, 8, 1);
+                @include adaptive-value("margin-top", 18, 3, 1);
+
+                @media (max-width: 768px) {
+                    line-height: normal;
+                }
+            }
+        }
+    }
+
+    // .nutrition-graphic
+
+    &-graphic {
+        @media (max-width: 768px) {
+            @include adaptive-value("padding-top", 30, 15, 1);
+            @include adaptive-value("padding-bottom", 60, 35, 1);
+
+            background-color: rgba($color: $accent, $alpha: 0.1);
+            width: 100vw;
+            margin-left: -12px;
+            padding-inline: 12px;
+        }
+
+        h3 {
+            @include adaptive-value("margin-bottom", 40, 27, 1);
+            text-align: center;
+            color: $blue;
+        }
+
+        // .nutrition-graphic__flex
+
+        &__flex {
+            display: flex;
+            justify-content: center;
+            gap: 85px;
+
+            @media (max-width: 1024px) {
+                gap: 20px;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    // .nutrition-info
+
+    &-info {
+        @include adaptive-value("margin-bottom", 60, 30, 1);
+    }
+}
+
+.nutrition-table {
+    @include adaptive-value("margin-bottom", 78, 25, 1);
+
+    @media (min-width: 769px) {
+        padding-top: 95px;
+        padding-bottom: 54px;
+        background-color: #e9fcff;
+    }
+
+    .text-accent {
+        margin-bottom: 60px;
     }
 }

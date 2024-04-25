@@ -89,6 +89,10 @@ h2 {
     @include adaptive-value("font-size", 40, 12, 1);
 }
 
+h3 {
+    @include adaptive-value("font-size", 20, 16, 1);
+}
+
 ._mobile {
     @media (min-width: 1025px) {
         display: none !important;
@@ -99,4 +103,22 @@ h2 {
     @media (max-width: 1024px) {
         display: none !important;
     }
+}
+
+.text-accent {
+    color: $accent;
+    @include adaptive-value("font-size", 20, 10, 1);
+
+    & > :not(:last-child) {
+        margin-bottom: 1em;
+    }
+
+    &.italic {
+        font-style: italic;
+    }
+}
+
+strong,
+b {
+    font-weight: 600;
 }
