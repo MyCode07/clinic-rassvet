@@ -88,3 +88,15 @@ h1 {
 h2 {
     @include adaptive-value("font-size", 40, 12, 1);
 }
+
+._mobile {
+    @media (min-width: 1025px) {
+        display: none !important;
+    }
+}
+
+._desctop {
+    @media (max-width: 1024px) {
+        display: none !important;
+    }
+}

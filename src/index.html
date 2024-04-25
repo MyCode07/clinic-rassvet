@@ -73,22 +73,26 @@
                         <ol>
                             <li id="params-brest">
                                 <span>Грудь</span>
-                                <img src="img/icons/brest.svg" alt="">
+                                <img class="_desctop" src="img/icons/brest.svg" alt="">
+                                <img class="_mobile" src="img/icons/brest-mob.svg" alt="">
                                 <span>88 см</span>
                             </li>
                             <li id="params-waise">
                                 <span>Талия</span>
-                                <img src="img/icons/waist.svg" alt="">
+                                <img class="_desctop" src="img/icons/waist.svg" alt="">
+                                <img class="_mobile" src="img/icons/waist-mob.svg" alt="">
                                 <span>62 см</span>
                             </li>
                             <li id="params-wrist">
                                 <span>Запястье</span>
-                                <img src="img/icons/wrist.svg" alt="">
+                                <img class="_desctop" src="img/icons/wrist.svg" alt="">
+                                <img class="_mobile" src="img/icons/wrist-mob.svg" alt="">
                                 <span>14,4 см</span>
                             </li>
                             <li id="params-hips">
                                 <span>Бёдра</span>
-                                <img src="img/icons/hips.svg" alt="">
+                                <img class="_desctop" src="img/icons/hips.svg" alt="">
+                                <img class="_mobile" src="img/icons/hips-mob.svg" alt="">
                                 <span>96 см</span>
                             </li>
                         </ol>
@@ -192,6 +196,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="params-text _mobile">
+                                * Вам рекомендуется провести анализ состава тела с помощью биоимпеданса, калипера или
+                                DEXA-сканера.
+                            </div>
                             <div class="params-item params-info">
                                 <div class="params-item__wrap">
                                     <div class="icon">
@@ -214,8 +222,731 @@
                         </div>
                     </div>
                 </div>
-                <div class="params-text">
+                <div class="params-text _desctop">
                     * Вам рекомендуется провести анализ состава тела с помощью биоимпеданса, калипера или DEXA-сканера.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section results">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__top _small">
+                    <h2>Результаты биоимпедансного анализа</h2>
+                </div>
+                <div class="results-compare">
+                    <span class="results-norm">
+                        <span></span>
+                        <span>Норма</span>
+                    </span>
+                    <span class="results-patient">
+                        <span></span>
+                        <span>Ваш показатель</span>
+                    </span>
+                </div>
+                <div class="grid grid-2">
+                    <div class="result-item">
+                        <h3>Общая жидкость, л</h3>
+                        <div class="result-item__flex">
+                            <div class="result-item__score">120</div>
+                            <div class="result-item__scale">
+                                <p>
+                                    <span>70</span>
+                                    <span>80</span>
+                                    <span>90</span>
+                                    <span>100</span>
+                                    <span>110</span>
+                                    <span>120</span>
+                                    <span>130</span>
+                                    <span>140</span>
+                                </p>
+                                <div style="--norma:calc(100% / 2); --patient:calc(100% / 8);">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <h3>Соотношение ВКЖ/ОКЖ</h3>
+                        <div class="result-item__flex">
+                            <div class="result-item__score">120</div>
+                            <div class="result-item__scale">
+                                <p>
+                                    <span>70</span>
+                                    <span>80</span>
+                                    <span>90</span>
+                                    <span>100</span>
+                                    <span>110</span>
+                                    <span>120</span>
+                                    <span>130</span>
+                                    <span>140</span>
+                                </p>
+                                <div style="--norma:calc(100% / 2); --patient:calc((100% / 2) + 10%);" class="red">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <h3>Общая жидкость, л</h3>
+                        <div class="result-item__flex">
+                            <div class="result-item__score">120</div>
+                            <div class="result-item__scale">
+                                <p>
+                                    <span>70</span>
+                                    <span>80</span>
+                                    <span>90</span>
+                                    <span>100</span>
+                                    <span>110</span>
+                                    <span>120</span>
+                                    <span>130</span>
+                                    <span>140</span>
+                                </p>
+                                <div style="--norma:calc(100% / 2); --patient:calc(100% / 8);">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <h3>Соотношение ВКЖ/ОКЖ</h3>
+                        <div class="result-item__flex">
+                            <div class="result-item__score">120</div>
+                            <div class="result-item__scale">
+                                <p>
+                                    <span>70</span>
+                                    <span>80</span>
+                                    <span>90</span>
+                                    <span>100</span>
+                                    <span>110</span>
+                                    <span>120</span>
+                                    <span>130</span>
+                                    <span>140</span>
+                                </p>
+                                <div style="--norma:calc(100% / 2); --patient:calc((100% / 2) + 10%);" class="red">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <h3>Общая жидкость, л</h3>
+                        <div class="result-item__flex">
+                            <div class="result-item__score">120</div>
+                            <div class="result-item__scale">
+                                <p>
+                                    <span>70</span>
+                                    <span>80</span>
+                                    <span>90</span>
+                                    <span>100</span>
+                                    <span>110</span>
+                                    <span>120</span>
+                                    <span>130</span>
+                                    <span>140</span>
+                                </p>
+                                <div style="--norma:calc(100% / 2); --patient:calc(100% / 8);">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <h3>Соотношение ВКЖ/ОКЖ</h3>
+                        <div class="result-item__flex">
+                            <div class="result-item__score">120</div>
+                            <div class="result-item__scale">
+                                <p>
+                                    <span>70</span>
+                                    <span>80</span>
+                                    <span>90</span>
+                                    <span>100</span>
+                                    <span>110</span>
+                                    <span>120</span>
+                                    <span>130</span>
+                                    <span>140</span>
+                                </p>
+                                <div style="--norma:calc(100% / 2); --patient:calc((100% / 2) + 10%);" class="red">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <h3>Общая жидкость, л</h3>
+                        <div class="result-item__flex">
+                            <div class="result-item__score">120</div>
+                            <div class="result-item__scale">
+                                <p>
+                                    <span>70</span>
+                                    <span>80</span>
+                                    <span>90</span>
+                                    <span>100</span>
+                                    <span>110</span>
+                                    <span>120</span>
+                                    <span>130</span>
+                                    <span>140</span>
+                                </p>
+                                <div style="--norma:calc(100% / 2); --patient:calc(100% / 8);">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <h3>Соотношение ВКЖ/ОКЖ</h3>
+                        <div class="result-item__flex">
+                            <div class="result-item__score">120</div>
+                            <div class="result-item__scale">
+                                <p>
+                                    <span>70</span>
+                                    <span>80</span>
+                                    <span>90</span>
+                                    <span>100</span>
+                                    <span>110</span>
+                                    <span>120</span>
+                                    <span>130</span>
+                                    <span>140</span>
+                                </p>
+                                <div style="--norma:calc(100% / 2); --patient:calc((100% / 2) + 10%);" class="red">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="results-text">*Если вам потребуются разъяснения, обратитесь к специалисту.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section results results-blue">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="grid">
+                    <div class="result-item">
+                        <h3>Правая рука</h3>
+                        <div class="grid grid-2">
+                            <div class="result-item__wrap">
+                                <label>Тощая масса по сегментам</label>
+                                <div class="result-item__flex">
+                                    <div class="result-item__score">120</div>
+                                    <div class="result-item__scale">
+                                        <p>
+                                            <span>70</span>
+                                            <span>80</span>
+                                            <span>90</span>
+                                            <span>100</span>
+                                            <span>110</span>
+                                            <span>120</span>
+                                            <span>130</span>
+                                            <span>140</span>
+                                        </p>
+                                        <div style="--norma:calc(100% / 2); --patient:calc(100% / 8);">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result-item__flex">
+                                    <div class="result-item__score">120 %</div>
+                                    <div class="result-item__scale">
+                                        <div style="--norma:calc(100% / 2); --patient:calc(100% / 8);">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="result-item__wrap">
+                                <label>Жировая масса по сегментам</label>
+                                <div class="result-item__flex">
+                                    <div class="result-item__score">120</div>
+                                    <div class="result-item__scale">
+                                        <p>
+                                            <span>70</span>
+                                            <span>80</span>
+                                            <span>90</span>
+                                            <span>100</span>
+                                            <span>110</span>
+                                            <span>120</span>
+                                            <span>130</span>
+                                            <span>140</span>
+                                        </p>
+                                        <div style="--norma:calc(100% / 2); --patient:calc(100% / 8);">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result-item__flex">
+                                    <div class="result-item__score">120 %</div>
+                                    <div class="result-item__scale">
+                                        <div style="--norma:calc(100% / 2); --patient:calc(100% / 8);">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="result-item">
+                        <h3>Правая рука</h3>
+                        <div class="grid grid-2">
+                            <div class="result-item__wrap">
+                                <label>Тощая масса по сегментам</label>
+                                <div class="result-item__flex">
+                                    <div class="result-item__score">120</div>
+                                    <div class="result-item__scale">
+                                        <p>
+                                            <span>70</span>
+                                            <span>80</span>
+                                            <span>90</span>
+                                            <span>100</span>
+                                            <span>110</span>
+                                            <span>120</span>
+                                            <span>130</span>
+                                            <span>140</span>
+                                        </p>
+                                        <div style="--norma:calc(100% / 2); --patient:calc(100% / 8);">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result-item__flex">
+                                    <div class="result-item__score">120 %</div>
+                                    <div class="result-item__scale">
+                                        <div style="--norma:calc(100% / 2); --patient:calc(100% / 8);">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="result-item__wrap">
+                                <label>Жировая масса по сегментам</label>
+                                <div class="result-item__flex">
+                                    <div class="result-item__score">120</div>
+                                    <div class="result-item__scale">
+                                        <p>
+                                            <span>70</span>
+                                            <span>80</span>
+                                            <span>90</span>
+                                            <span>100</span>
+                                            <span>110</span>
+                                            <span>120</span>
+                                            <span>130</span>
+                                            <span>140</span>
+                                        </p>
+                                        <div style="--norma:calc(100% / 2); --patient:calc(100% / 8);">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result-item__flex">
+                                    <div class="result-item__score">120 %</div>
+                                    <div class="result-item__scale">
+                                        <div style="--norma:calc(100% / 2); --patient:calc(100% / 8);">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="result-item">
+                        <h3>Правая рука</h3>
+                        <div class="grid grid-2">
+                            <div class="result-item__wrap">
+                                <label>Тощая масса по сегментам</label>
+                                <div class="result-item__flex">
+                                    <div class="result-item__score">120</div>
+                                    <div class="result-item__scale">
+                                        <p>
+                                            <span>70</span>
+                                            <span>80</span>
+                                            <span>90</span>
+                                            <span>100</span>
+                                            <span>110</span>
+                                            <span>120</span>
+                                            <span>130</span>
+                                            <span>140</span>
+                                        </p>
+                                        <div style="--norma:calc(100% / 2); --patient:calc(100% / 8);">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result-item__flex">
+                                    <div class="result-item__score">120 %</div>
+                                    <div class="result-item__scale">
+                                        <div style="--norma:calc(100% / 2); --patient:calc(100% / 8);">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="result-item__wrap">
+                                <label>Жировая масса по сегментам</label>
+                                <div class="result-item__flex">
+                                    <div class="result-item__score">120</div>
+                                    <div class="result-item__scale">
+                                        <p>
+                                            <span>70</span>
+                                            <span>80</span>
+                                            <span>90</span>
+                                            <span>100</span>
+                                            <span>110</span>
+                                            <span>120</span>
+                                            <span>130</span>
+                                            <span>140</span>
+                                        </p>
+                                        <div style="--norma:calc(100% / 2); --patient:calc(100% / 8);">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result-item__flex">
+                                    <div class="result-item__score">120 %</div>
+                                    <div class="result-item__scale">
+                                        <div style="--norma:calc(100% / 2); --patient:calc(100% / 8);">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="results-text">*Если вам потребуются разъяснения, обратитесь к специалисту.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section results-conclusion">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="params-item params-info large">
+                    <div class="params-item__wrap">
+                        <div class="icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48">
+                                <use xlink:href='img/svg/icons.svg#info' />
+                            </svg>
+                        </div>
+                        <h3>Заключение по биоимпедансному анализу</h3>
+                        <p>Ваш фактический рацион не отвечает потребностям вашего организма. Наблюдается дефицит
+                            углеводов, избыток жиров, избыток
+                            белка. 52.4% важнейших для здоровья элементов содержатся в вашем рационе в необходимом
+                            количестве. Несмотря на это,
+                            следующие витамины и минералы поступают в недостаточном количестве: витамин A, бета-каротин,
+                            витамин D, витамин E,
+                            витамин K, витамин С, холин, витамин В5, витамин В9, кальций, железо, калий, хлор, бор, йод.
+                            В вашем фактическом рационе
+                            преобладают такие группы продуктов, как овощи и молочные продукты. Анализ состава жирных
+                            кислот показал допустимое
+                            соотношение омега-3/омега-6. Желательно повысить употребление продуктов, богатых омега-3
+                            жирными кислотами для
+                            достижения оптимального соотношения омега-3/омега-6. Вы потребляете оптимальное количество
+                            простых сахаров. В вашем
+                            рационе недостаточно клетчатки. Это снижает ваше насыщение, ухудшает пищеварение и повышает
+                            риск развития некоторых
+                            заболеваний. В целом, вы потребляете меньше калорий, чем вам требуется для вашей цели.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section params lifestyle">
+        <div class="section__linear">
+            <div class="_container">
+                <h2>Образ жизни и состояние здоровья</h2>
+            </div>
+        </div>
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="grid grid-3">
+                    <div class="grid-item">
+                        <div class="params-item">
+                            <div class="params-item__flex">
+                                <div class="params-item__left">
+                                    <div class="icon">
+                                        <svg width="30" height="27" viewBox="0 0 30 27">
+                                            <use xlink:href='img/svg/icons.svg#heart' />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="params-item__right">
+                                    <label>Хронические заболевания</label>
+                                </div>
+                            </div>
+                            <div class="params-item__text">
+                                <div class="params-item__extra">
+                                    <ol>
+                                        <li>Хронический диабет 2 типа</li>
+                                        <li>Акне</li>
+                                        <li>Бронхиальная астма</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="params-item">
+                            <div class="params-item__flex">
+                                <div class="params-item__left">
+                                    <div class="icon">
+                                        <svg width="20" height="28" viewBox="0 0 20 28">
+                                            <use xlink:href='img/svg/icons.svg#lightning' />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="params-item__right">
+                                    <label>Уровень стресса</label>
+                                </div>
+                            </div>
+                            <div class="params-item__text">
+                                <div class="params-item__extra">
+                                    <p>
+                                        Низкий
+                                        <svg width="15" height="15" viewBox="0 0 15 15">
+                                            <use xlink:href='img/svg/icons.svg#arrow-down' />
+                                        </svg>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="params-item">
+                        <div class="params-item__flex">
+                            <div class="params-item__left">
+                                <div class="icon">
+                                    <svg width="27" height="27" viewBox="0 0 27 27">
+                                        <use xlink:href='img/svg/icons.svg#stop' />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="params-item__right">
+                                <label>Аллергии</label>
+                            </div>
+                        </div>
+                        <div class="params-item__text">
+                            <div class="params-item__extra">
+                                <label>Продукты питания:</label>
+                                <ol>
+                                    <li>Кешью</li>
+                                    <li>Арахис</li>
+                                    <li>Кленовый сироп</li>
+                                </ol>
+                                <label>Лекарства и БАДы:</label>
+                                <ol>
+                                    <li>Пеницилин</li>
+                                </ol>
+                                <label>Другое:</label>
+                                <ol>
+                                    <li>Тополиный пух</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                <div class="grid-item">
+                        <div class="params-item">
+                            <div class="params-item__flex">
+                                <div class="params-item__left">
+                                    <div class="icon">
+                                        <svg width="30" height="30" viewBox="0 0 30 30">
+                                            <use xlink:href='img/svg/icons.svg#star' />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="params-item__right">
+                                    <label>Особые состояния</label>
+                                </div>
+                            </div>
+                            <div class="params-item__text">
+                                <div class="params-item__extra">
+                                    <ol>
+                                        <li>Беременность</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="params-item">
+                            <div class="params-item__flex">
+                                <div class="params-item__left">
+                                    <div class="icon">
+                                        <svg width="27" height="23" viewBox="0 0 27 23">
+                                            <use xlink:href='img/svg/icons.svg#attention' />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="params-item__right">
+                                    <label>Вредные привычки</label>
+                                </div>
+                            </div>
+                            <div class="params-item__text">
+                                <div class="params-item__extra">
+                                    <ol>
+                                        <li>Курение</li>
+                                        <li>Употребление алкоголя</li>
+                                        <li>Нет</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="params-item params-info large">
+                        <div class="params-item__wrap">
+                            <div class="icon">
+                                <svg width="48" height="48" viewBox="0 0 48 48">
+                                    <use xlink:href='img/svg/icons.svg#info' />
+                                </svg>
+                            </div>
+                            <h3>Заключение</h3>
+                            <p>У вас наблюдается умеренно выраженный стресс. Это требует коррекции, поскольку в таких
+                                условиях может повышаться риск
+                                развития сердечно-сосудистых заболеваний, ожирения, диабета 2-го типа, хронической
+                                усталости и других состояний. А
+                                наличие вредных привычек может негативно сказываться на вашем здоровье, самочувствии и
+                                препятствовать достижению цели.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

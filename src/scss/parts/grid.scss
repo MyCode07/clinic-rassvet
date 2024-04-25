@@ -7,5 +7,22 @@
     &-2 {
         grid-template-columns: 1fr 1fr;
         gap: 23px 20px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+    }
+
+    // .grid-3
+
+    &-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 17px 20px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
     }
 }
