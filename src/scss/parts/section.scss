@@ -805,18 +805,29 @@
 }
 
 .nutrition-mass {
-    h3 {
+    @media (min-width: 769px) {
+        padding-top: 87px;
+        padding-bottom: 143px;
+        background-color: #e9fcff;
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+        @include adaptive-value("margin-bottom", 80, 31, 1);
+    }
+
+    .section__body {
+        position: relative;
+    }
+
+    // .nutrition-mass__title
+
+    &__title {
         color: $blue;
         text-align: center;
         @include adaptive-value("margin-bottom", 68, 15, 1);
 
         @include adaptive-value("font-size", 32, 16, 1);
-    }
-
-    @media (min-width: 769px) {
-        padding-top: 87px;
-        padding-bottom: 143px;
-        background-color: #e9fcff;
     }
 
     // .nutrition-mass__flex
@@ -825,6 +836,8 @@
         display: flex;
         justify-content: center;
         gap: 165px;
+        z-index: 1;
+        position: relative;
 
         @media (max-width: 1024px) {
             gap: 20px;
@@ -914,6 +927,174 @@
                 & > :nth-child(4) {
                     width: 3em;
                     white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    .params-info {
+        position: relative;
+        z-index: 1;
+        margin-top: 98px;
+
+        @include adaptive-value("margin-top", 90, 46, 1);
+
+        p {
+            @media (min-width: 769px) {
+                line-height: 1.6;
+            }
+
+            @include adaptive-value("font-size", 20, 10, 1);
+        }
+    }
+
+    // .nutrition-mass__img
+
+    &__img {
+        position: absolute;
+        right: -248px;
+        bottom: 106px;
+        width: 664px;
+        z-index: 0;
+        max-width: none;
+
+        @media (max-width: 1024px) {
+            width: 50%;
+            right: unset;
+            left: -30px;
+            bottom: unset;
+            top: 30%;
+        }
+
+        @media (max-width: 768px) {
+            top: 20px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 376px;
+        }
+    }
+}
+
+.analisys {
+    @include adaptive-value('margin-bottom', 113, 20, 1);
+    
+    .section__top {
+        color: $blue;
+        text-align: center;
+        @include adaptive-value("margin-bottom", 66, 27, 1);
+
+        h3 {
+            @include adaptive-value("font-size", 32, 16, 1);
+        }
+
+        p {
+            @include adaptive-value("font-size", 20, 12, 1);
+            @include adaptive-value("margin-top", 30, 5, 1);
+            font-weight: 600;
+        }
+    }
+
+    table {
+        @include adaptive-value("font-size", 20, 10, 1);
+
+        thead {
+            margin-bottom: 20px;
+            color: $blue;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        th {
+            font-weight: 500;
+        }
+
+        tbody {
+            & > :not(:last-child) {
+                margin-bottom: 20px;
+
+                @media (max-width: 768px) {
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+                    border-bottom: 1px solid #d9d9d9;
+                }
+            }
+
+            tr {
+                @media (min-width: 769px) {
+                    border-radius: 20px;
+                    background-color: $white;
+                    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+                    padding-top: 26px;
+                    padding-bottom: 26px;
+                }
+
+                @media (max-width: 768px) {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+
+                    & > :nth-child(2n) {
+                        background-color: rgba($color: $accent, $alpha: 0.1);
+                    }
+                }
+            }
+        }
+
+        tr {
+            @media (min-width: 769px) {
+                display: grid;
+                grid-template-columns: 24.65% 15.9% 15.9% 1fr;
+                gap: 20px;
+                padding-inline: 20px;
+            }
+        }
+
+        td {
+            svg,
+            img {
+                width: 1em;
+                height: 1em;
+                margin-top: 0.1em;
+            }
+
+            @media (max-width: 768px) {
+                display: flex;
+                gap: 10px;
+            }
+
+            label {
+                display: none;
+                width: 30%;
+                flex: 0 0 auto;
+                font-weight: 500;
+                color: $blue;
+
+                @media (max-width: 768px) {
+                    display: block;
+                }
+            }
+
+            & > span {
+                @media (max-width: 768px) {
+                    flex: 1 1 auto;
+                }
+
+                &:has(img, svg) {
+                    display: flex;
+                    gap: 0.25em;
+                }
+            }
+
+            &:first-child {
+                font-weight: 500;
+                @include adaptive-value("font-size", 20, 12, 1);
+            }
+
+            &:last-child {
+                @media (max-width: 768px) {
+                    line-height: 1.2;
                 }
             }
         }

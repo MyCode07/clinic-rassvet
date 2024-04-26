@@ -1,3 +1,39 @@
+const nurtCharts = document.querySelectorAll('.list .nutrition-graphic__item');
+
+if (nurtCharts.length) {
+    nurtCharts.forEach(item => {
+        const percent = +item.dataset.percent;
+        const color = item.dataset.color;
+
+        const data = {
+            labels: false,
+            datasets: [{
+                label: '',
+                data: [percent, 100 - percent],
+                backgroundColor: [color, '#ffffff00'],
+                borderWidth: 0
+            }]
+        };
+
+        console.log(data);
+
+        const config = {
+            type: 'doughnut',
+            data,
+            options: {
+                cutout: '80%',
+                borderRadius: 20,
+            }
+        };
+
+        const canvas = item.querySelector('canvas');
+        const myChart = new Chart(
+            canvas,
+            config
+        );
+    })
+}
+
 const charts = document.querySelectorAll('.nutrition-diagram__item');
 
 if (charts.length) {
@@ -40,18 +76,22 @@ if (charts.length) {
 
 
 const chartsMassGraphic = document.querySelector('.nutrition-mass__graphic canvas');
+const chartsMassGraphicList = document.querySelectorAll('.nutrition-mass__list li');
 
 if (chartsMassGraphic) {
+    let icons = []
+    let percents = []
+    chartsMassGraphicList.forEach(item => {
+        icons.push(`img/icons/${item.dataset.icon}`)
+        percents.push(+item.dataset.percent)
+    });
+
     const data = {
         datasets: [{
-            data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
-            backgroundColor: ['#02A0FC', '#02A0FC', '#02A0FC', '#02A0FC', '#02A0FC', '#02A0FC', '#02A0FC', '#02A0FC', '#02A0FC', '#02A0FC',],
+            data: percents,
+            backgroundColor: ['#02A0FC'],
             borderWidth: 3,
-            image: [
-                'img/logo.png',
-                'img/logo.png',
-                'img/logo.png',
-            ]
+            image: icons
         }]
     };
 

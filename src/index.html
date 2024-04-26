@@ -1080,6 +1080,35 @@
                         </div>
                     </div>
                 </div>
+                <div class="nutrition-graphic list">
+                    <h3>Из всех важнейших веществ в вашем рационе:</h3>
+                    <div class="nutrition-graphic__flex">
+                        <div class="nutrition-graphic__item nomra chart" data-percent="52" data-color="#1dbdf5">
+                            <canvas></canvas>
+                            <svg>
+                                <circle class="circle-background"></circle>
+                            </svg>
+                            <span class="percent">52%</span>
+                            <span class="status">в норме</span>
+                        </div>
+                        <div class="nutrition-graphic__item deficit chart" data-percent="42" data-color="#d26256">
+                            <canvas></canvas>
+                            <svg>
+                                <circle class="circle-background"></circle>
+                            </svg>
+                            <span class="percent">43%</span>
+                            <span class="status">в дефиците</span>
+                        </div>
+                        <div class="nutrition-graphic__item excess chart" data-percent="5" data-color="#1dbdf5">
+                            <canvas></canvas>
+                            <svg>
+                                <circle class="circle-background"></circle>
+                            </svg>
+                            <span class="percent">5%</span>
+                            <span class="status">в избытке</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1403,14 +1432,14 @@
     <section class="section nutrition-mass">
         <div class="section__container _container">
             <div class="section__body">
-                <h3>Массовая доля групп продуктов питания в рационе</h3>
+                <h3 class="nutrition-mass__title">Массовая доля групп продуктов питания в рационе</h3>
                 <div class="nutrition-mass__flex">
                     <div class="nutrition-mass__graphic">
                         <canvas></canvas>
                     </div>
                     <div class="nutrition-mass__list">
                         <ol>
-                            <li>
+                            <li data-icon="fruits.svg" data-percent="10">
                                 <svg width="24" height="24" viewBox="0 0 24 24">
                                     <use xlink:href='img/svg/icons.svg#fruits' />
                                 </svg>
@@ -1418,7 +1447,7 @@
                                 <span><b>10%</b></span>
                                 <span>200 г</span>
                             </li>
-                            <li>
+                            <li data-icon="berries.svg" data-percent="10">
                                 <svg width="19" height="19" viewBox="0 0 19 19">
                                     <use xlink:href='img/svg/icons.svg#berries' />
                                 </svg>
@@ -1426,7 +1455,7 @@
                                 <span><b>10%</b></span>
                                 <span>200 г</span>
                             </li>
-                            <li>
+                            <li data-icon="vegetables.svg" data-percent="10">
                                 <svg width="18" height="19" viewBox="0 0 18 19">
                                     <use xlink:href='img/svg/icons.svg#vegetables' />
                                 </svg>
@@ -1434,7 +1463,7 @@
                                 <span><b>10%</b></span>
                                 <span>200 г</span>
                             </li>
-                            <li>
+                            <li data-icon="nuts.svg" data-percent="10">
                                 <svg width="20" height="20" viewBox="0 0 20 20">
                                     <use xlink:href='img/svg/icons.svg#nuts' />
                                 </svg>
@@ -1442,7 +1471,7 @@
                                 <span><b>10%</b></span>
                                 <span>200 г</span>
                             </li>
-                            <li>
+                            <li data-icon="beans.svg" data-percent="10">
                                 <svg width="18" height="19" viewBox="0 0 18 19">
                                     <use xlink:href='img/svg/icons.svg#beans' />
                                 </svg>
@@ -1450,7 +1479,7 @@
                                 <span><b>10%</b></span>
                                 <span>200 г</span>
                             </li>
-                            <li>
+                            <li data-icon="cereals.svg" data-percent="10">
                                 <svg width="22" height="22" viewBox="0 0 22 22">
                                     <use xlink:href='img/svg/icons.svg#cereals' />
                                 </svg>
@@ -1458,7 +1487,7 @@
                                 <span><b>10%</b></span>
                                 <span>200 г</span>
                             </li>
-                            <li>
+                            <li data-icon="meet.svg" data-percent="10">
                                 <svg width="18" height="20" viewBox="0 0 18 20">
                                     <use xlink:href='img/svg/icons.svg#meet' />
                                 </svg>
@@ -1466,7 +1495,7 @@
                                 <span><b>10%</b></span>
                                 <span>200 г</span>
                             </li>
-                            <li>
+                            <li data-icon="bird.svg" data-percent="10">
                                 <svg width="20" height="20" viewBox="0 0 20 20">
                                     <use xlink:href='img/svg/icons.svg#bird' />
                                 </svg>
@@ -1474,7 +1503,7 @@
                                 <span><b>10%</b></span>
                                 <span>200 г</span>
                             </li>
-                            <li>
+                            <li data-icon="fish.svg" data-percent="10">
                                 <svg width="22" height="17" viewBox="0 0 22 17">
                                     <use xlink:href='img/svg/icons.svg#fish' />
                                 </svg>
@@ -1482,7 +1511,7 @@
                                 <span><b>10%</b></span>
                                 <span>200 г</span>
                             </li>
-                            <li>
+                            <li data-icon="other-food.svg" data-percent="10">
                                 <svg width="24" height="17" viewBox="0 0 24 17">
                                     <use xlink:href='img/svg/icons.svg#other-food' />
                                 </svg>
@@ -1493,6 +1522,154 @@
                         </ol>
                     </div>
                 </div>
+                <div class="params-item params-info large">
+                    <div class="params-item__wrap">
+                        <div class="icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48">
+                                <use xlink:href="img/svg/icons.svg#info"></use>
+                            </svg>
+                        </div>
+                        <h3>Заключение по фактическому питанию</h3>
+                        <p>Ваш фактический рацион не отвечает потребностям вашего организма. Наблюдается дефицит
+                            углеводов, избыток жиров, избыток
+                            белка. 52.4% важнейших для здоровья элементов содержатся в вашем рационе в необходимом
+                            количестве. Несмотря на это,
+                            следующие витамины и минералы поступают в недостаточном количестве: витамин A, бета-каротин,
+                            витамин D, витамин E,
+                            витамин K, витамин С, холин, витамин В5, витамин В9, кальций, железо, калий, хлор, бор, йод.
+                            В вашем фактическом рационе
+                            преобладают такие группы продуктов, как овощи и молочные продукты. Анализ состава жирных
+                            кислот показал допустимое
+                            соотношение омега-3/омега-6. Желательно повысить употребление продуктов, богатых омега-3
+                            жирными кислотами для
+                            достижения оптимального соотношения омега-3/омега-6. Вы потребляете оптимальное количество
+                            простых сахаров. В вашем
+                            рационе недостаточно клетчатки. Это снижает ваше насыщение, ухудшает пищеварение и повышает
+                            риск развития некоторых
+                            заболеваний. В целом, вы потребляете меньше калорий, чем вам требуется для вашей цели.</p>
+                    </div>
+                </div>
+                <img class="nutrition-mass__img" src="img/vegetables.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="section analisys">
+        <div class="section__linear">
+            <div class="_container">
+                <h2>Анализы</h2>
+            </div>
+        </div>
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__top _center">
+                    <h3>Показатели, имеющие отклонения</h3>
+                    <p>Дата интерпретации: <time>20.02.2026</time></p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Показатель</th>
+                            <th>Результат</th>
+                            <th>Норма</th>
+                            <th>Комментарии</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label>Показатель</label>
+                                <span>Триглицериды</span>
+                            </td>
+                            <td>
+                                <label>Результат</label>
+                                <span>
+                                    <img src="img/icons/arrow-red.svg" alt="">
+                                    <span>0,52 ммоль/л</span>
+                                </span>
+                            </td>
+                            <td>
+                                <label>Норма</label>
+                                <span>0,52 - 0,6 ммоль/л</span>
+                            </td>
+                            <td>
+                                <label>Комментарии</label>
+                                <span>Пониженный уровень триглицеридов и ЛПОНП может встречаться при повышении функций
+                                    щитовидной железы ( гипертиреоз).
+                                    Интенсивная физическая нагрузка снижает уровень триглицеридов в крови.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Показатель</label>
+                                <span>Триглицериды</span>
+                            </td>
+                            <td>
+                                <label>Результат</label>
+                                <span>
+                                    <img src="img/icons/arrow-red.svg" alt="">
+                                    <span>0,52 ммоль/л</span>
+                                </span>
+                            </td>
+                            <td>
+                                <label>Норма</label>
+                                <span>0,52 - 0,6 ммоль/л</span>
+                            </td>
+                            <td>
+                                <label>Комментарии</label>
+                                <span>Пониженный уровень триглицеридов и ЛПОНП может встречаться при повышении функций
+                                    щитовидной железы ( гипертиреоз).
+                                    Интенсивная физическая нагрузка снижает уровень триглицеридов в крови.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Показатель</label>
+                                <span>Триглицериды</span>
+                            </td>
+                            <td>
+                                <label>Результат</label>
+                                <span>
+                                    <img src="img/icons/arrow-red.svg" alt="">
+                                    <span>0,52 ммоль/л</span>
+                                </span>
+                            </td>
+                            <td>
+                                <label>Норма</label>
+                                <span>0,52 - 0,6 ммоль/л</span>
+                            </td>
+                            <td>
+                                <label>Комментарии</label>
+                                <span>Пониженный уровень триглицеридов и ЛПОНП может встречаться при повышении функций
+                                    щитовидной железы ( гипертиреоз).
+                                    Интенсивная физическая нагрузка снижает уровень триглицеридов в крови.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Показатель</label>
+                                <span>Триглицериды</span>
+                            </td>
+                            <td>
+                                <label>Результат</label>
+                                <span>
+                                    <img src="img/icons/arrow-red.svg" alt="">
+                                    <span>0,52 ммоль/л</span>
+                                </span>
+                            </td>
+                            <td>
+                                <label>Норма</label>
+                                <span>0,52 - 0,6 ммоль/л</span>
+                            </td>
+                            <td>
+                                <label>Комментарии</label>
+                                <span>Пониженный уровень триглицеридов и ЛПОНП может встречаться при повышении функций
+                                    щитовидной железы ( гипертиреоз).
+                                    Интенсивная физическая нагрузка снижает уровень триглицеридов в крови.</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
