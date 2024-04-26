@@ -122,3 +122,19 @@ strong,
 b {
     font-weight: 600;
 }
+
+table {
+    width: 100%;
+    display: block;
+    text-align: left;
+
+    thead {
+        width: 100%;
+        display: block;
+    }
+
+    tbody {
+        width: 100%;
+        display: block;
+    }
+}

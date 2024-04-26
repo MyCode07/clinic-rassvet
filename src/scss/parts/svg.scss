@@ -6,7 +6,6 @@ $backgroundColor: rgba(
 );
 $foregroundColor: $accent;
 
-
 :root {
     --pi: 3.14;
     --svgSize: 235;
@@ -17,8 +16,8 @@ $foregroundColor: $accent;
         --strokeWidth: 10;
     }
 
-    --c: calc((var(--svgSize) - var(--strokeWidth)) * var(--pi)); 
-    --r: calc((var(--svgSize) - var(--strokeWidth)) * 0.5); 
+    --c: calc((var(--svgSize) - var(--strokeWidth)) * var(--pi));
+    --r: calc((var(--svgSize) - var(--strokeWidth)) * 0.5);
 }
 
 .chart {

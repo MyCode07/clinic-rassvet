@@ -34,9 +34,4 @@
 // }
 
 
-// document.addEventListener('click', function (e) {
-//     let targetEl = e.target;
-//     if (targetEl.classList.contains('pages-close')) {
-//         document.querySelector('.pages').classList.toggle('_hide');
-//     }
-// })
+import "./chart.js";

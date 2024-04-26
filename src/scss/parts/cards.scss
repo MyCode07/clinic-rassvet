@@ -469,19 +469,8 @@
     }
 
     table {
-        width: 100%;
-        display: block;
-        text-align: left;
-
         thead {
-            width: 100%;
-            display: block;
             margin-bottom: 26px;
-        }
-
-        tbody {
-            width: 100%;
-            display: block;
         }
 
         tr {
@@ -596,6 +585,168 @@
         td {
             &:first-child {
                 font-weight: 500;
+            }
+        }
+    }
+}
+
+.nutrition-diagram__item {
+    background-color: $white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+
+    @media (max-width: 768px) {
+        border-radius: 10px;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: "";
+            inset: -1px;
+            background: $linear;
+            border-radius: inherit;
+            z-index: -1;
+        }
+    }
+
+    .canvas {
+        position: relative;
+        width: 200px;
+        height: 200px;
+
+        border-radius: 50%;
+
+        @media (max-width: 1024px) {
+            width: 120px;
+            height: 120px;
+        }
+
+        @media (max-width: 768px) {
+            width: 64px;
+            height: 64px;
+        }
+
+        canvas {
+            position: absolute;
+            left: 0;
+            top: -5px;
+            width: 100%;
+            height: 100%;
+        }
+
+        svg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+
+            .circle-background {
+                r: calc((200 - 20 - 10) * 0.5);
+                cx: 50%;
+                cy: 50%;
+                fill: none;
+                $foregroundColor: $accent;
+                stroke: rgba($color: $black, $alpha: 0.05);
+                stroke-width: 30px;
+                opacity: 0.8;
+
+                @media (max-width: 1024px) {
+                    r: calc((120 - 10 - 10) * 0.5);
+                    stroke-width: 10px;
+                }
+
+                @media (max-width: 768px) {
+                    r: calc((64 - 7 - 10) * 0.5);
+                    stroke-width: 7px;
+                }
+            }
+        }
+    }
+
+    // .nutrition-diagram__item-top
+
+    &-top {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+
+        border-radius: 20px 20px 0px 0px;
+        background: linear-gradient(90deg, rgba(29, 189, 245, 0.16) 0%, rgba(29, 189, 245, 0) 100%);
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        @include adaptive-value("padding-inline", 30, 8, 1);
+        @include adaptive-value("padding-top", 10, 5, 1);
+        @include adaptive-value("padding-bottom", 10, 5, 1);
+
+        @media (max-width: 768px) {
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        h3 {
+            color: $blue;
+            line-height: 1.09;
+
+            @include adaptive-value("font-size", 22, 14, 1);
+        }
+    }
+
+    // .nutrition-diagram__item-bottom
+
+    &-bottom {
+        @include adaptive-value("padding-top", 28, 10, 1);
+        @include adaptive-value("padding-inline", 24, 8, 1);
+        @include adaptive-value("padding-bottom", 34, 14, 1);
+
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+
+        .canvas {
+            flex: 0 0 auto;
+        }
+
+        table {
+            max-width: 362px;
+
+            tr {
+                display: flex;
+                gap: 10px;
+                justify-content: space-between;
+
+                @include adaptive-value("font-size", 20, 10, 1);
+
+                &:not(:last-child) {
+                    @include adaptive-value("margin-bottom", 10, 2, 1);
+                }
+
+                & > :first-child {
+                    font-weight: 600;
+                    width: 2em;
+
+                    color: var(--color);
+
+                    @media (max-width: 768px) {
+                        min-width: 54px;
+                    }
+                }
+
+                & > :nth-child(2) {
+                    flex: 1 1 auto;
+                    max-width: 140px;
+                }
+
+                & > :last-child {
+                    color: #666666;
+                    width: 90px;
+
+                    @media (max-width: 768px) {
+                        min-width: 54px;
+                        width: auto;
+                    }
+                }
             }
         }
     }
