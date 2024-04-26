@@ -976,8 +976,8 @@
 }
 
 .analisys {
-    @include adaptive-value('margin-bottom', 113, 20, 1);
-    
+    @include adaptive-value("margin-bottom", 113, 20, 1);
+
     .section__top {
         color: $blue;
         text-align: center;
@@ -1097,6 +1097,204 @@
                     line-height: 1.2;
                 }
             }
+        }
+    }
+}
+
+.analisys-table {
+    @include adaptive-value("margin-bottom", 157, 25, 1);
+
+    @media (min-width: 1024px) {
+        background-color: rgba($color: $accent, $alpha: 0.1);
+        @include adaptive-value("padding-top", 129, 30, 1);
+        padding-bottom: 46px;
+    }
+
+    .section__body {
+    }
+
+    .scroll-wrapper {
+        margin-bottom: 60px;
+
+        @media (max-width: 1024px) {
+            width: 100vw;
+            padding-inline: 12px;
+            margin-left: -12px;
+            overflow-x: auto;
+
+            padding-top: 50px;
+            padding-bottom: 10px;
+            margin-top: -50px;
+            margin-bottom: -10px;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+
+    .table {
+        background: $white;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+        padding: 44px;
+        border-radius: 20px;
+
+        @media (max-width: 1024px) {
+            width: fit-content;
+            border-radius: 10px;
+            padding-top: 18px;
+            padding-bottom: 18px;
+            padding-inline: 15px;
+
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    h3 {
+        color: $blue;
+
+        @include adaptive-value("font-size", 24, 14, 1);
+        @include adaptive-value("margin-bottom", 40, 14, 1);
+
+        @media (min-width: 769px) {
+            text-align: center;
+        }
+    }
+
+    table {
+        display: table;
+        border-collapse: collapse;
+
+        thead {
+            display: inherit;
+            border: 1px solid #ebebeb;
+            border-bottom: 0;
+            color: $blue;
+
+            @include adaptive-value("font-size", 16, 12, 1);
+
+            th {
+                font-weight: 500;
+                padding: 0 10px;
+
+                &[colspan] {
+                    border-bottom: 1px solid #ebebeb;
+                    text-align: center;
+                }
+
+                &:not(:last-child) {
+                    border-right: 1px solid #ebebeb;
+                }
+            }
+        }
+
+        tbody {
+            display: inherit;
+
+            @include adaptive-value("font-size", 16, 10, 1);
+
+            tr {
+                border: 1px solid #ebebeb;
+
+                &:not(:last-child) {
+                    border-bottom: 0;
+                }
+            }
+        }
+
+        td,
+        th {
+            width: 7.435%;
+            text-align: center;
+
+            @media (max-width: 1024px) {
+                min-width: 45px;
+            }
+        }
+
+        th[rowspan],
+        td {
+            &:nth-child(1),
+            &:nth-child(2) {
+                width: 16.438%;
+                text-align: left;
+
+                @media (max-width: 1024px) {
+                    min-width: 130px;
+                }
+            }
+        }
+
+        td {
+            padding: 6px 10px;
+
+            &:not(:last-child) {
+                border-right: 1px solid #ebebeb;
+            }
+
+            &:has(img, svg) {
+            }
+
+            img,
+            svg {
+                display: inline-block;
+                width: 1em;
+                height: 1em;
+                position: relative;
+                top: 0.2em;
+            }
+        }
+    }
+
+    // .analisys-table__graphic
+
+    &__graphic {
+        margin-top: 17px;
+        height: 455px;
+
+        @media (max-width: 1024px) {
+            margin-top: 10px;
+            height: 290px;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    // .analisys-table__text
+
+    &__text {
+        @include adaptive-value("margin-top", 60, 10, 1);
+
+        @include adaptive-value("font-size", 18, 10, 1);
+        color: #7f7f7f;
+    }
+}
+
+.analisys-tests {
+    @include adaptive-value("margin-bottom", 153, 26, 1);
+
+    .section__top {
+        text-align: center;
+        @include adaptive-value("margin-bottom", 53, 19, 1);
+
+        h3 {
+            color: $blue;
+            @include adaptive-value("font-size", 32, 16, 1);
+        }
+    }
+
+    .grid {
+        @include adaptive-value("gap", 46, 10, 1);
+
+        @media (min-width: 1025px) {
+            padding: 25px 30px;
+            border-radius: 20px;
+            background: $white;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
         }
     }
 }

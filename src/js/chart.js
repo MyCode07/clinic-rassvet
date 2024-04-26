@@ -129,3 +129,49 @@ if (chartsMassGraphic) {
         config
     );
 }
+
+const analisysTable = document.querySelector('.analisys-table__graphic canvas');
+if (analisysTable) {
+    const data = {
+        labels: ['03.01', '03.02', '03.03', '03.04', '03.05', '03.06', '03.07', '03.08', '03.09', '03.10', '03.11', '03.12'],
+        datasets: [{
+            label: '',
+            data: [145, 125, 115, 155, 100, 110, 130, 105, 140, 105, 150, 145],
+            fill: false,
+            borderWidth: 2,
+            borderColor: '#1F74CA',
+            tension: 0,
+            pointRadius: 4,
+            pointBackgroundColor: '#1F74CA',
+        }]
+    };
+
+    if (window.innerWidth <= 1024) {
+        data.datasets[0].pointRadius = 2.5
+    }
+
+    const config = {
+        type: 'line',
+        data: data,
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    offset: true,
+                },
+                y: {
+                    // beginAtZero: true
+                    grace: '5%',
+                }
+            }, plugins: {
+                legend: false
+            }
+        }
+    };
+
+    const canvas = analisysTable;
+    const myChart = new Chart(
+        canvas,
+        config
+    );
+}
