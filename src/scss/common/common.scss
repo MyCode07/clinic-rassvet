@@ -106,7 +106,7 @@ h3 {
 }
 
 .text-accent {
-    color: $accent;
+    color: $blue;
     @include adaptive-value("font-size", 20, 10, 1);
 
     & > :not(:last-child) {

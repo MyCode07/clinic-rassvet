@@ -77,7 +77,6 @@ if (charts.length) {
 
 const chartsMassGraphic = document.querySelector('.nutrition-mass__graphic canvas');
 const chartsMassGraphicList = document.querySelectorAll('.nutrition-mass__list li');
-
 if (chartsMassGraphic) {
     let icons = []
     let percents = []
@@ -95,12 +94,16 @@ if (chartsMassGraphic) {
         }]
     };
 
+    let width = 20
+
+    if (window.innerWidth <= 1024) {
+        width = 12
+    }
+
     const segmentImage = {
         id: 'segmentImage',
         afterDatasetDraw(chart, args, plugins) {
             const { ctx, data } = chart;
-
-            const width = 40;
             ctx.save();
             chart.getDatasetMeta(0).data.forEach((datapoint, index) => {
                 const x = chart.getDatasetMeta(0).data[index].tooltipPosition().x
