@@ -143,7 +143,6 @@ table {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 
     @include adaptive-value("gap", 20, 5, 1);
 
@@ -166,6 +165,7 @@ table {
         letter-spacing: -0.02em;
 
         @media (max-width: 768px) {
+            flex: 1 1 auto;
             border-radius: 10px;
         }
 

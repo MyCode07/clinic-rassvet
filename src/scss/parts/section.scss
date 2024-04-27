@@ -320,6 +320,10 @@
             margin-top: 0;
         }
     }
+
+    .params-item {
+        height: fit-content;
+    }
 }
 
 .results {
@@ -1388,5 +1392,306 @@
 }
 
 .nutritional-value__graphic {
-    @include adaptive-value("margin-bottom", 12, 27, 1);
+    @include adaptive-value("margin-bottom", 127, 27, 1);
+}
+
+.nutrition-plan {
+    @include adaptive-value("margin-bottom", 105, 44, 1);
+
+    .tabs-content .tabs {
+        @include adaptive-value("margin-top", 20, 12, 1);
+        @include adaptive-value("margin-bottom", 40, 27, 1);
+    }
+
+    .text-accent {
+        @include adaptive-value("margin-top", 40, 10, 1);
+    }
+
+    // .nutrition-plan__total
+
+    &__total {
+        @include adaptive-value("margin-top", 40, 10, 1);
+
+        h3 {
+            text-align: center;
+            @include adaptive-value("margin-bottom", 26, 10, 1);
+            @include adaptive-value("font-size", 22, 12, 1);
+            text-transform: uppercase;
+            color: $blue;
+
+            @media (max-width: 768px) {
+                text-align: left;
+            }
+        }
+
+        .grid {
+            max-width: 988px;
+            margin-inline: auto;
+
+            @media (max-width: 768px) {
+                gap: 10px;
+            }
+        }
+
+        .params-item {
+            &__wrap {
+            }
+
+            .icon {
+            }
+
+            &__flex {
+            }
+
+            &__left {
+            }
+
+            &__right {
+            }
+        }
+    }
+
+    .section__body {
+        position: relative;
+    }
+
+    // .nutrition-plan__img
+
+    &__img {
+        position: absolute;
+        z-index: -1;
+        opacity: 0.3;
+        max-width: none;
+        top: 226px;
+
+        @include adaptive-value("width", 907, 475, 1);
+
+        @media (min-width: 769px) {
+            @include adaptive-value("left", -229, 0, 1);
+        }
+
+        @media (max-width: 768px) {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.5;
+
+            &:before {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color: #d3d3d3, $alpha: 0.5);
+            }
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            opacity: 0.56;
+            object-position: center;
+        }
+    }
+}
+
+.shopping-list {
+    position: relative;
+    @include adaptive-value("padding-bottom", 96, 38, 1);
+    margin-bottom: 0;
+
+    .tabs-content .tabs {
+        @include adaptive-value("margin-top", 20, 12, 1);
+        @include adaptive-value("margin-bottom", 40, 27, 1);
+    }
+
+    .grid {
+    }
+
+    .shopping-list__img {
+        position: absolute;
+        width: 100%;
+        height: 63%;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0.4;
+        mix-blend-mode: darken;
+
+        @media (max-width: 768px) {
+            height: 100%;
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #d3d3d3, $alpha: 0.5);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
+            object-position: center;
+        }
+    }
+}
+
+.recepies {
+    margin-bottom: 0;
+    @include adaptive-value("padding-bottom", 96, 33, 1);
+    position: relative;
+
+    // .recepies-img
+
+    &-img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        opacity: 0.2;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .grid {
+        @media (min-width: 769px) {
+            @include adaptive-value("gap", 40, 10, 1);
+        }
+    }
+}
+
+.contacts {
+    margin-bottom: 0;
+    @include adaptive-value("padding-bottom", 201, 35, 1);
+
+    background-color: rgba($color: $accent, $alpha: 0.32);
+
+    .section__linear {
+        @include adaptive-value("margin-bottom", 116, 23, 1);
+    }
+
+    h3 {
+        @include adaptive-value("font-size", 40, 12, 1);
+        margin-bottom: 1em;
+        color: $blue;
+
+        @media (min-width: 769px) {
+            text-align: center;
+        }
+    }
+
+    // .contacts__content
+
+    &__content {
+        @include adaptive-value("font-size", 22, 10, 1);
+
+        @media (min-width: 769px) {
+            @include adaptive-value("margin-bottom", 104, 14, 1);
+        }
+
+        @media (max-width: 768px) {
+            @include adaptive-value("margin-bottom", 60, 14, 1);
+            @include adaptive-value("padding-bottom", 60, 14, 1);
+
+            border-bottom: 1px solid #d9d9d9;
+        }
+
+        & > :not(:last-child) {
+            margin-bottom: 1em;
+        }
+    }
+
+    // .contacts__flex
+
+    &__flex {
+        max-width: 870px;
+        margin-inline: auto;
+
+        @media (min-width: 769px) {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        ol {
+            max-width: 522px;
+            @include adaptive-value("font-size", 20, 10, 1);
+
+            & > :not(:last-child) {
+                @include adaptive-value("margin-bottom", 28, 10, 1);
+            }
+
+            li {
+                display: flex;
+                gap: 16px;
+
+                @media (max-width: 768px) {
+                    gap: 10px;
+                }
+
+                img,
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    flex: 0 0 auto;
+                    fill: currentColor;
+
+                    @media (max-width: 768px) {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
+
+        div {
+            max-width: 310px;
+
+            @media (max-width: 768px) {
+                width: 202px;
+                margin-inline: auto;
+                @include adaptive-value("margin-top", 80, 16, 1);
+            }
+
+            img {
+                border-radius: 20px;
+
+                @media (max-width: 768px) {
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+    // .contacts__text
+
+    &__text {
+        @include adaptive-value("margin-top", 131, 16, 1);
+        @include adaptive-value("font-size", 16, 10, 1);
+        color: #7f7f7f;
+    }
+
+    // .contacts__container
+
+    &__container {
+    }
+
+    // .contacts__body
+
+    &__body {
+    }
 }

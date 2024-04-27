@@ -915,3 +915,436 @@
         }
     }
 }
+
+.nutrition-plan__item {
+    border-radius: 20px;
+    background: $white;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+
+    @media (max-width: 768px) {
+        border-radius: 10px;
+
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: "";
+            inset: -1px;
+            background: $linear;
+            border-radius: inherit;
+            z-index: -1;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 12px;
+        }
+    }
+
+    div {
+        @include adaptive-value("padding-inline", 28, 10, 1);
+        @include adaptive-value("padding-top", 14, 7.5, 1);
+        @include adaptive-value("padding-bottom", 14, 7.5, 1);
+
+        background: linear-gradient(90deg, rgba(29, 189, 245, 0.1) 0%, rgba(29, 189, 245, 0) 100%);
+        color: $blue;
+        border-radius: 20px 20px 0 0;
+
+        @media (max-width: 768px) {
+            border-radius: 10px 10px 0 0;
+        }
+
+        label {
+            @include adaptive-value("font-size", 22, 12, 1);
+            margin-bottom: 4px;
+            display: block;
+
+            @media (max-width: 768px) {
+                margin-bottom: 2px;
+            }
+        }
+
+        time {
+            display: block;
+            @include adaptive-value("font-size", 16, 10, 1);
+        }
+    }
+
+    table {
+        padding-top: 9px;
+        @include adaptive-value("padding-inline", 28, 10, 1);
+        @include adaptive-value("padding-bottom", 55, 18, 1);
+
+        thead {
+            @include adaptive-value("font-size", 16, 12, 1);
+            margin-bottom: 16px;
+
+            @media (max-width: 768px) {
+                margin-bottom: 10px;
+            }
+        }
+
+        tr {
+            display: grid;
+            gap: 35px;
+            grid-template-columns: 2fr repeat(5, 0.925fr);
+
+            @media (min-width: 769px) {
+                @include adaptive-value("gap", 35, 10, 1);
+            }
+
+            @media (max-width: 768px) {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 6px 0;
+            }
+
+            @media (max-width: 768px) {
+                th:first-child {
+                    display: none;
+                }
+
+                td:first-child {
+                    grid-column: span 5;
+                    @include adaptive-value("font-size", 2, 012, 1);
+                    font-weight: 600;
+                }
+
+                td,
+                th {
+                    padding-right: 6px;
+                }
+
+                & > :first-child,
+                & > :last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        tbody {
+            @include adaptive-value("font-size", 20, 10, 1);
+
+            & > :not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            @media (min-width: 769px) {
+                & > :nth-child(2n) {
+                    background-color: rgba($color: $accent, $alpha: 0.1);
+                }
+            }
+
+            @media (max-width: 768px) {
+                tr > :not(:first-child) {
+                    background-color: rgba($color: $accent, $alpha: 0.1);
+                }
+            }
+        }
+
+        th,
+        td {
+        }
+    }
+}
+
+.shopping-list__item {
+    @media (min-width: 769px) {
+        border-radius: 12px;
+        background: $white;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+        padding: 18px;
+    }
+
+    & > :not(:last-child) {
+        @include adaptive-value("margin-bottom", 24, 12, 1);
+    }
+
+    li {
+        div {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: $blue;
+            font-weight: 600;
+            @include adaptive-value("font-size", 20, 12, 1);
+
+            @media (max-width: 768px) {
+                margin-bottom: 5px;
+            }
+
+            label {
+                display: block;
+            }
+
+            svg,
+            img {
+                width: 18px;
+                height: 18px;
+                flex: 0 0 auto;
+                fill: currentColor;
+
+                @media (max-width: 768px) {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+
+        p {
+            @include adaptive-value("font-size", 16, 10, 1);
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+
+            & > :first-child {
+                flex: 1 1 auto;
+                max-width: 192px;
+            }
+
+            & > :last-child {
+                flex: 0 0 auto;
+                min-width: 4.5em;
+
+                @media (max-width: 768px) {
+                    min-width: 0;
+                    text-align: right;
+                }
+            }
+
+            &:nth-child(2n + 1) {
+                background-color: rgba($color: $accent, $alpha: 0.1);
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+
+                @media (max-width: 768px) {
+                    margin-bottom: 4px;
+                }
+            }
+        }
+    }
+}
+
+.recepies-item {
+    border-radius: 20px;
+    background-color: $white;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+
+    @media (max-width: 768px) {
+        border-radius: 10px;
+
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: "";
+            inset: -1px;
+            background: $linear;
+            border-radius: inherit;
+            z-index: -1;
+        }
+    }
+
+    // .recepies-item__top
+
+    &__top {
+        padding: 14px 28px;
+        background: linear-gradient(90deg, rgba(29, 189, 245, 0.1) 0%, rgba(29, 189, 245, 0) 100%);
+        border-radius: 20px 20px 0px 0px;
+
+        @media (min-width: 769px) {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        @media (max-width: 1024px) {
+            padding: 14px 20px;
+        }
+
+        @media (max-width: 768px) {
+            border-radius: 10px 10px 0px 0px;
+            padding: 7.5px 10px;
+        }
+
+        h3 {
+            @include adaptive-value("font-size", 22, 12, 1);
+            color: $blue;
+
+            @media (max-width: 768px) {
+                margin-bottom: 2px;
+            }
+        }
+
+        time {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            @include adaptive-value("font-size", 16, 10, 1);
+            font-weight: 500;
+            gap: 4px;
+
+            svg,
+            img {
+                width: 1em;
+                height: 1em;
+                flex: 0 0 auto;
+                fill: currentColor;
+            }
+        }
+    }
+
+    // .recepies-item__bottom
+
+    &__bottom {
+        padding: 25px 50px 25px 28px;
+
+        @media (max-width: 1024px) {
+            padding: 15px 20px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 10px;
+        }
+    }
+
+    // .recepies-item__table
+
+    &__table {
+        display: flex;
+        justify-content: space-between;
+        gap: 28px;
+
+        @media (max-width: 768px) {
+            flex-direction: column-reverse;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        table {
+            flex: 1 1 auto;
+
+            @media (min-width: 769px) {
+                border: 1px solid $blue;
+                padding: 18px 20px;
+                border-radius: 20px;
+            }
+
+            thead {
+                @include adaptive-value("font-size", 16, 12, 1);
+                font-weight: 600;
+                margin-bottom: 16px;
+
+                @media (max-width: 768px) {
+                    margin-bottom: 6px;
+                }
+
+                tr {
+                    & > :nth-child(2) {
+                        @media (min-width: 769px) {
+                            display: none;
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        & > :first-child {
+                            grid-column: span 3;
+                        }
+
+                        & > :not(:first-child) {
+                            @include adaptive-value("font-size", 16, 10, 1);
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+
+            tr {
+                display: grid;
+                grid-template-columns: 2.4fr repeat(2, 1fr);
+                gap: 35px;
+
+                @media (max-width: 1024px) {
+                    gap: 20px;
+                }
+
+                @media (max-width: 768px) {
+                    gap: 6px;
+
+                    & > :last-child {
+                        text-align: right;
+                    }
+                }
+            }
+
+            tbody {
+                @include adaptive-value("font-size", 20, 10, 1);
+
+                & > :not(:last-child) {
+                    margin-bottom: 12px;
+
+                    @media (max-width: 768px) {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                & > :nth-child(2n) {
+                    background-color: rgba($color: $accent, $alpha: 0.1);
+                }
+            }
+        }
+    }
+
+    // .recepies-item__img
+
+    &__img {
+        flex: 0 0 auto;
+        border: 1px solid $blue;
+
+        width: 205px;
+        height: 205px;
+        min-height: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+
+        @media (max-width: 768px) {
+            border-radius: 10px;
+            width: 80px;
+            height: 80px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // .recepies-item__text
+
+    &__text {
+        @include adaptive-value("margin-top", 20, 10, 1);
+        @include adaptive-value("font-size", 18, 10, 1);
+
+        max-width: 1014px;
+
+        @media (max-width: 768px) {
+            @include adaptive-value("padding-top", 20, 10, 1);
+            border-top: 1px solid #d9d9d9;
+            line-height: 1.2;
+        }
+
+        ol {
+            padding-left: 1.25em;
+        }
+
+        li {
+            list-style: demical;
+        }
+    }
+}

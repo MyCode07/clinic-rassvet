@@ -1,6 +1,5 @@
 const tabAreas = document.querySelectorAll('[data-tabs-area]');
 
-
 if (tabAreas.length) {
     tabAreas.forEach(area => {
         const tabs = area.querySelectorAll('[data-tab]');
@@ -8,6 +7,9 @@ if (tabAreas.length) {
 
         tabs.forEach(tab => {
             const id = tab.dataset.tab;
+            const activeParentContent = tab.closest('[data-tab-content]')
+            const childTab = area.querySelector(`[data-tab-content="${id}"] [data-tab]._active`)
+            const activeChildTabs = area.querySelectorAll(`[data-tab-content] [data-tab]._active`)
 
             tab.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -19,7 +21,20 @@ if (tabAreas.length) {
                         item.classList.add('_active');
                     }
                     else {
-                        item.classList.remove('_active');
+                        if (childTab && activeChildTabs.length) {
+                            activeChildTabs.forEach(asd => {
+                                asd.classList.add('_active');
+                            })
+                            item.classList.remove('_active');
+                        }
+                        else {
+                            item.classList.remove('_active');
+                        }
+                    }
+
+                    if (activeParentContent) {
+                        const activeParentTab = area.querySelector(`[data-tab="${activeParentContent.dataset.tabContent}"]`);
+                        activeParentTab.classList.add('_active');
                     }
                 });
 
@@ -30,7 +45,19 @@ if (tabAreas.length) {
                         item.classList.add('_active');
                     }
                     else {
-                        item.classList.remove('_active');
+                        if (activeParentContent && activeParentContent.dataset.tabContent == item.dataset.tabContent) {
+                            activeParentContent.classList.add('_active');
+                        }
+                        else {
+                            item.classList.remove('_active');
+                        }
+                    }
+
+                    if (childTab) {
+                        const activeChilTabContent = area.querySelector(`[data-tab-content="${childTab.dataset.tab}"]`)
+                        if (activeChilTabContent) {
+                            activeChilTabContent.classList.add('_active');
+                        }
                     }
                 });
             })
