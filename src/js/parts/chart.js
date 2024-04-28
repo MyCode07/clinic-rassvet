@@ -1,4 +1,4 @@
-const nurtCharts = document.querySelectorAll('.list .nutrition-graphic__item');
+const nurtCharts = document.querySelectorAll('.nutrition-graphic__item');
 
 if (nurtCharts.length) {
     nurtCharts.forEach(item => {
