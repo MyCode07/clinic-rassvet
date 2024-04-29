@@ -1,0 +1,145 @@
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        color-adjust: exact;
+    }
+
+    section {
+        page-break-after: always;
+        height: 100vh;
+    }
+
+    ._container {
+        padding: 0 1cm;
+        height: 100%;
+    }
+
+    .hero {
+        padding-top: 0;
+        padding-bottom: 1.5cm;
+
+        // .hero__head
+
+        &__head {
+            z-index: 1;
+            position: relative;
+            padding: 1cm 0;
+            background-color: $white;
+            color: $black;
+
+            // .hero__head-body
+
+            &-body {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .date {
+                font-size: 10px;
+                text-align: right;
+
+                span,
+                time {
+                    display: block;
+                }
+            }
+        }
+
+        // .hero__logo
+
+        &__logo {
+            display: flex;
+            align-items: center;
+            gap: 23px;
+
+            font-size: 14px;
+            font-weight: 500;
+
+            img {
+                width: 69px;
+                height: 69px;
+            }
+        }
+
+        // .hero__bgi
+
+        &__bgi {
+            &:after {
+                display: none;
+            }
+
+            &:before {
+                background: linear-gradient(211.42deg, #ffffff -10.87%, #1ebaf4 124.43%);
+                opacity: 0.7;
+            }
+        }
+
+        // .hero__container
+
+        &__container {
+        }
+
+        // .hero__body
+
+        &__body {
+            padding-top: 4cm;
+            padding-bottom: 1.5cm;
+            height: calc(100vh - 4cm);
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 55px;
+            color: $blue;
+
+            span {
+                font-size: 32px;
+                margin-top: 7px;
+            }
+        }
+
+        .patient {
+            font-size: 24px;
+            font-weight: 500;
+            margin-top: 50px;
+            color: $black;
+            flex: 1 1 auto;
+
+            // .patient-name
+
+            &-name {
+                display: block;
+            }
+
+            // .patient-age
+
+            &-age {
+                display: block;
+            }
+        }
+
+        .author {
+            max-width: 410px;
+            margin-left: auto;
+            text-align: right;
+            font-size: 14px;
+            color: $black;
+
+            // .author-name
+
+            &-name {
+                display: block;
+                font-weight: 600;
+            }
+
+            // .author-info
+
+            &-info {
+                display: block;
+            }
+        }
+    }
+}
