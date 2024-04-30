@@ -1,9 +1,13 @@
 const nurtCharts = document.querySelectorAll('.nutrition-graphic__item');
-
 if (nurtCharts.length) {
     nurtCharts.forEach(item => {
         const percent = +item.dataset.percent;
         const color = item.dataset.color;
+
+        let borderRadius = 20;
+        if (percent == 100) {
+            borderRadius = 0;
+        }
 
         const data = {
             labels: false,
@@ -22,8 +26,8 @@ if (nurtCharts.length) {
             data,
             options: {
                 cutout: '80%',
-                borderRadius: 20,
-            }
+                borderRadius: borderRadius,
+            },
         };
 
         const canvas = item.querySelector('canvas');
@@ -35,7 +39,6 @@ if (nurtCharts.length) {
 }
 
 const charts = document.querySelectorAll('.nutrition-diagram__item');
-
 if (charts.length) {
     charts.forEach(item => {
         const percents = item.querySelectorAll('.percent');
@@ -149,8 +152,10 @@ if (analisysTable) {
         }]
     };
 
+    let lineBorder = 2
     if (window.innerWidth <= 1024) {
         data.datasets[0].pointRadius = 2.5
+        lineBorder = 1
     }
 
     const config = {
@@ -166,8 +171,28 @@ if (analisysTable) {
                     // beginAtZero: true
                     grace: '5%',
                 }
-            }, plugins: {
-                legend: false
+            },
+            plugins: {
+                legend: false,
+
+                annotation: {
+                    annotations: {
+                        line1: {
+                            type: 'line',
+                            yMin: 110,
+                            yMax: 110,
+                            borderWidth: lineBorder,
+                            borderColor: '#5BBC65'
+                        },
+                        line2: {
+                            type: 'line',
+                            yMin: 140,
+                            yMax: 140,
+                            borderWidth: lineBorder,
+                            borderColor: '#5BBC65'
+                        }
+                    }
+                }
             }
         }
     };

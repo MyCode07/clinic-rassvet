@@ -86,7 +86,7 @@ h1 {
 }
 
 h2 {
-    @include adaptive-value("font-size", 40, 12, 1);
+    @include adaptive-value("font-size", 40, 16, 1);
 }
 
 h3 {

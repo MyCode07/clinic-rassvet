@@ -1,0 +1,21 @@
+const doughnutBackground = {
+    id: 'doughnutBackground',
+    beforeDatasetsDraw(chart, args, options = { enabled: boolean, color: string }) {
+        const { ctx, width, height } = chart
+
+        const { innerRadius } = chart.getDatasetMeta(chart.data.datasets.length - 1).controller
+        const { outerRadius } = chart.getDatasetMeta(0).controller
+        const radiusLength = outerRadius - innerRadius
+
+        const x = width / 2,
+            y = height / 2
+
+
+
+        ctx.beginPath()
+        ctx.arc(x, y, outerRadius - radiusLength / 2, 0, 2 * Math.PI)
+        ctx.lineWidth = radiusLength
+        ctx.strokeStyle = options.color ?? 'rgba(17, 17, 17, 0.05)'
+        ctx.stroke()
+    },
+}

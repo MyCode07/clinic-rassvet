@@ -556,6 +556,12 @@
     .results-blue {
         background-color: $white;
 
+        .section__body {
+            & > .grid {
+                gap: 1.2cm 1cm;
+            }
+        }
+
         .result-item {
             &:not(:last-child) {
                 padding-bottom: 25px;

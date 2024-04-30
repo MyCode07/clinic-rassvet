@@ -8,12 +8,12 @@ $foregroundColor: $accent;
 
 :root {
     --pi: 3.14;
-    --svgSize: 235;
-    --strokeWidth: 29;
+    --svgSize: 227.5;
+    --strokeWidth: 25;
 
     @media (max-width: 768px) {
-        --svgSize: 80;
-        --strokeWidth: 10;
+        --svgSize: 70;
+        --strokeWidth: 8;
     }
 
     --c: calc((var(--svgSize) - var(--strokeWidth)) * var(--pi));
