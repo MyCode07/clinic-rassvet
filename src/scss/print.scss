@@ -453,6 +453,59 @@
                 line-height: normal;
             }
         }
+
+        // .params-male
+
+        &-male {
+            .params-flex__image {
+                width: 275px;
+
+                ol {
+                    margin-top: 180px;
+
+                    li {
+                        &#params-brest {
+                            margin-bottom: 26px;
+
+                            img {
+                                width: 130px;
+                                margin-bottom: -2px;
+                            }
+                        }
+                        &#params-waise {
+                            margin-bottom: 24px;
+
+                            img {
+                                width: 135px;
+                                margin-top: 1px;
+                                margin-bottom: -5px;
+                            }
+                        }
+                        &#params-wrist {
+                            margin-bottom: 20px;
+
+                            img {
+                                width: 90px;
+                                margin-top: 1px;
+                                margin-bottom: -4px;
+                            }
+                        }
+
+                        &#params-hips {
+                            img {
+                                width: 115px;
+                                margin-top: -8px;
+                            }
+                        }
+                    }
+                }
+
+                .img img {
+                    width: 202px;
+                    height: 677px;
+                }
+            }
+        }
     }
 
     .params-item {
@@ -590,6 +643,143 @@
             p {
                 font-size: 16px;
             }
+        }
+    }
+
+    .lifestyle {
+        .params-item:not(.params-info) {
+            position: relative;
+
+            &:before {
+                position: absolute;
+                content: "";
+                inset: 0;
+                background: linear-gradient(89deg, #1e73c9 1.09%, #1dbbf4 100%);
+                z-index: -1;
+                border-radius: inherit;
+            }
+
+            &:after {
+                position: absolute;
+                content: "";
+                inset: 2px;
+                background-color: $white;
+                z-index: -1;
+                border-radius: inherit;
+            }
+        }
+
+        .params-info {
+            margin-top: 40px;
+
+            .icon {
+                width: 50px;
+                height: 50px;
+
+                img,
+                svg {
+                    width: 27px;
+                    height: 27px;
+                }
+            }
+        }
+    }
+
+    .nutrition {
+        // .nutrition-title
+
+        &-title {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        // .nutrition-info
+
+        &-info {
+        }
+
+        // .nutrition-graphic
+
+        &-graphic {
+            h3 {
+                text-align: left;
+                font-size: 18px;
+                margin-bottom: 40px;
+            }
+
+            // .nutrition-graphic__item
+
+            &__item {
+                width: 201px;
+                height: 201px;
+
+                &:after {
+                    inset: 25px;
+                }
+            }
+        }
+
+        .calorie-distribution__flex {
+            span,
+            time {
+                font-size: 11px;
+            }
+
+            time {
+                padding: 4px;
+            }
+
+            span {
+                margin-top: 6px;
+            }
+        }
+
+        .params-item {
+            margin-bottom: 25px;
+
+            //  .params-item__right
+
+            &__right {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-right: 30px;
+
+                .results-compare {
+                    margin-bottom: 0;
+
+                    & > span {
+                        font-size: 14px;
+                    }
+                }
+
+                span {
+                    font-size: 14px;
+                }
+            }
+
+            //  .params-item__text
+
+            &__text {
+                padding: 40px 30px 25px 30px;
+            }
+
+            &.fluid-amount {
+                .params-item__text {
+                    padding: 35px 30px 20px 30px;
+                }
+
+                .fluid-amount__result {
+                    margin-top: 6px;
+                    font-size: 11px;
+                }
+            }
+        }
+
+        .text-accent {
+            margin-top: 15px;
+            font-size: 12px;
+            margin-bottom: 24px;
         }
     }
 }
