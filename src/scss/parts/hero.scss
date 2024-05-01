@@ -4,7 +4,7 @@
     padding-bottom: 180px;
     color: $white;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1560px) {
         padding-bottom: 100px;
     }
 
@@ -69,12 +69,8 @@
         @media (min-width: 1025px) {
             margin-top: 115px;
 
-            @media (max-width: 1440px) {
-                margin: 0;
-            }
-
-            @media (max-width: 1200px) {
-                @include adaptive-value("margin-top", 115, 50, 1);
+            @media (max-width: 1560px) {
+                margin-top: -40px;
             }
         }
     }
@@ -94,7 +90,7 @@
 
         @include adaptive-value("border-radius", 20, 10, 1);
 
-        @media (max-width: 1440px) {
+        @media (max-width: 1560px) {
             padding: 15px 20px;
             margin-top: 40px;
             margin-bottom: 30px;
@@ -165,6 +161,11 @@
 
             @media (max-width: 1024px) {
                 line-height: 1.2;
+                max-width: 300px;
+            }
+
+            @media (max-width: 540px) {
+                max-width: 257px;
             }
         }
     }
