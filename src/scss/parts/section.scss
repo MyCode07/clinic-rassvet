@@ -62,7 +62,7 @@
     @include adaptive-value("padding-bottom", 121, 32, 1);
 
     p {
-        @include adaptive-value("font-size", 22, 10, 1);
+        @include adaptive-value("font-size", 22, 12, 1);
         color: #000;
 
         &:not(:last-child) {

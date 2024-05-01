@@ -69,7 +69,15 @@ h1 {
     letter-spacing: -1px;
     text-transform: uppercase;
 
-    @include adaptive-value("font-size", 70, 22, 1);
+    font-size: 77px;
+
+    @media (max-width: 1440px) {
+        font-size: 50px;
+    }
+
+    @media (max-width: 1200px) {
+        @include adaptive-value("font-size", 70, 22, 1);
+    }
 
     @media (max-width: 1024px) {
         line-height: 1.15;
@@ -80,7 +88,16 @@ h1 {
         line-height: 1.36;
         display: block;
 
-        @include adaptive-value("font-size", 40, 16, 1);
+        font-size: 40px;
+
+        @media (max-width: 1440px) {
+            font-size: 30px;
+        }
+
+        @media (max-width: 1200px) {
+            @include adaptive-value("font-size", 40, 16, 1);
+        }
+
         @include adaptive-value("margin-top", 22, 7, 1);
     }
 }
@@ -107,7 +124,7 @@ h3 {
 
 .text-accent {
     color: $blue;
-    @include adaptive-value("font-size", 20, 10, 1);
+    @include adaptive-value("font-size", 20, 12, 1);
 
     & > :not(:last-child) {
         margin-bottom: 1em;
