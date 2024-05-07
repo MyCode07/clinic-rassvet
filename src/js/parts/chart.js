@@ -19,8 +19,6 @@ if (nurtCharts.length) {
             }]
         };
 
-        console.log(data);
-
         const config = {
             type: 'doughnut',
             data,

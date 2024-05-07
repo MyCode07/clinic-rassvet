@@ -21,7 +21,8 @@
         flex-direction: column;
     }
 
-    .section__body {
+    .section__body,
+    .contacts__body {
         flex: 1 1 auto;
     }
 
@@ -82,6 +83,10 @@
             margin-bottom: 0;
             margin-top: 14px;
         }
+    }
+
+    .text-accent {
+        font-size: 12px;
     }
 
     .section__footer {
@@ -449,8 +454,8 @@
             }
 
             p {
-                font-size: 16px;
-                line-height: normal;
+                font-size: 16px !important;
+                line-height: normal !important;
             }
         }
 
@@ -778,8 +783,405 @@
 
         .text-accent {
             margin-top: 15px;
+            margin-bottom: 25px;
+        }
+    }
+
+    .nutrition-table {
+        .text-accent {
+            margin-bottom: 25px;
+        }
+
+        &__item {
+            padding: 10px;
+            border-radius: 10px;
+            background-color: $white;
+            box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+
+            &:after {
+                display: none !important;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 9px;
+            }
+
+            & > span {
+                margin-bottom: 10px;
+            }
+
+            table {
+                thead {
+                    margin-bottom: 10px;
+                }
+
+                th:nth-child(2),
+                td:nth-child(2) {
+                    height: 13px;
+                }
+
+                tr.parent {
+                    margin-bottom: 4px;
+                }
+            }
+        }
+    }
+
+    .nutrition-diagram {
+        .grid {
+            gap: 10px;
+        }
+
+        // .nutrition-diagram__item
+
+        &__item {
+            .canvas {
+                width: 110px;
+                height: 110px;
+            }
+
+            // .nutrition-diagram__item-top
+
+            &-top {
+                min-height: 50px;
+            }
+
+            // .nutrition-diagram__item-bottom
+
+            &-bottom {
+                padding: 15px;
+
+                table {
+                    max-width: 80%;
+
+                    tr {
+                        font-size: 15px;
+
+                        & > :nth-child(2) {
+                            max-width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .nutrition-mass {
+        overflow: hidden;
+        background-color: unset;
+
+        // .nutrition-mass__title
+
+        &__title {
+            font-size: 18px;
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        .section__body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        // .nutrition-mass__flex
+
+        &__flex {
+            flex: 1 1 auto;
+        }
+
+        // .nutrition-mass__img
+
+        &__img {
+            top: unset;
+            bottom: 0;
+            right: 0;
+            left: unset;
+            transform: translate(40%, 80%);
+            width: 522px;
+        }
+
+        // .nutrition-mass__onlytext
+
+        &__onlytext {
+            .nutrition-mass__img {
+                width: calc(100% + 2cm);
+                right: -1cm;
+                bottom: -2cm;
+                transform: translate(0, 0);
+            }
+        }
+    }
+
+    .analisys {
+        .section__top {
+            text-align: left;
+            margin-bottom: 25px;
+
+            p {
+                margin-top: 0;
+            }
+
+            h3,
+            p {
+                display: inline-block;
+                font-size: 18px;
+            }
+        }
+
+        table {
             font-size: 12px;
-            margin-bottom: 24px;
+
+            tbody {
+                tr {
+                    border-radius: 12px;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+
+                    grid-template-columns: 15.9% 15.9% 15.9% 1fr;
+                    gap: 15px;
+                }
+
+                td:first-child {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        // .analisys-text
+
+        &-text {
+            font-size: 14px;
+            color: #7f7f7f;
+        }
+    }
+
+    .analisys-table {
+        h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .table {
+            width: 100%;
+
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+
+            table {
+                th[rowspan]:nth-child(1),
+                th[rowspan]:nth-child(2),
+                td:nth-child(1),
+                td:nth-child(2) {
+                    min-width: 0;
+                }
+
+                thead th {
+                    padding: 0 7px;
+                }
+
+                td {
+                    padding: 8px;
+                }
+            }
+        }
+    }
+
+    .final-conclusions {
+        position: relative;
+
+        // .final-conclusions__img
+
+        &__img {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+
+    .nutrition-plan {
+        overflow: hidden;
+
+        // .nutrition-plan__item
+
+        &__item {
+            display: flex;
+
+            table {
+                padding-bottom: 17px;
+            }
+
+            div {
+                background-color: unset;
+            }
+        }
+
+        // .nutrition-plan__total
+
+        &__total {
+            margin-top: 25px;
+
+            h3 {
+                text-align: left;
+            }
+        }
+
+        // .nutrition-plan__img
+
+        &__img {
+            bottom: 0;
+            top: unset;
+            left: unset;
+            right: 0;
+
+            transform: translate(60%, 90%) rotate(46deg);
+        }
+    }
+
+    .shopping-list {
+        overflow: hidden;
+
+        // .shopping-list__item
+
+        &__item {
+            & > :not(:last-child) {
+                margin-bottom: 14px;
+            }
+
+            li {
+                div {
+                    font-size: 14px;
+                    margin-bottom: 8px;
+                }
+
+                p {
+                    font-size: 12px;
+
+                    &:not(:last-child) {
+                        margin-bottom: 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    .recepies-item {
+        // .recepies-item__top
+
+        &__top {
+        }
+
+        // .recepies-item__bottom
+
+        &__bottom {
+        }
+
+        // .recepies-item__table
+
+        &__table {
+            table {
+                border-radius: 12px;
+
+                thead {
+                    font-size: 13px;
+                }
+
+                tbody {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        // .recepies-item__img
+
+        &__img {
+        }
+
+        // .recepies-item__text
+
+        &__text {
+        }
+    }
+
+    .contacts {
+        position: relative;
+        background-color: unset;
+
+        // .contacts__bgi
+
+        &__bgi {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            left: 0;
+            top: 0;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            img {
+                flex: 0 0 auto;
+                width: 100%;
+                height: 77%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            &:before,
+            &:after {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            &:before {
+                background: rgba($color: $white, $alpha: 0.42);
+                backdrop-filter: blur(4.65px);
+                z-index: 1;
+            }
+
+            &:after {
+                background: linear-gradient(211.42deg, #ffffff -10.87%, #1ebaf4 124.43%);
+                opacity: 0.7;
+                z-index: -1;
+            }
+        }
+
+        h3 {
+            text-align: left;
+            font-size: 21px;
+            margin-bottom: 25px;
+        }
+
+        // .contacts__content
+
+        &__content {
+            font-size: 18px;
+            margin-bottom: 170px;
+        }
+
+        // .contacts__flex
+
+        .contacts__flex {
+            ol {
+                font-size: 20px;
+            }
+
+            div {
+                width: 192px;
+
+                img {
+                    border-radius: 0;
+                }
+            }
         }
     }
 }

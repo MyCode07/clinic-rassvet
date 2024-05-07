@@ -1412,7 +1412,7 @@
                             </div>
                         </div>
                         <div class="params-item__text">
-                            
+
                             <div class="result-item__scale">
                                 <div style="--norma:calc(100% / 2); --patient:calc(100% / 3);" class="red">
                                 </div>
@@ -1742,7 +1742,17 @@
 
     <section class="section nutrition-diagram">
         <div class="section__container _container">
+            <div class="section__header">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="name">Фролов Иван Андреевич, 38 лет</div>
+            </div>
             <div class="section__body">
+                <div class="section__title">
+                    <span>Оценка фактического питания</span>
+                    <img src="img/icons/section-linear.svg" alt="">
+                </div>
                 <div class="text-accent italic">
                     <p>Ниже вам представлены наглядные диаграммы. Они показывают соотношение в вашем прошлом рационе
                         важнейших для здоровья
@@ -1750,307 +1760,284 @@
                         или ухудшая его. Для
                         подробных разъяснений обратитесь к специалисту</p>
                 </div>
+                <div class="grid">
+                    <div class="nutrition-diagram__item" id="calorie-intake">
+                        <div class="nutrition-diagram__item-top">
+                            <h3>Распределение калорийности рациона по приёмам пищи</h3>
+                        </div>
+                        <div class="nutrition-diagram__item-bottom">
+                            <div class="canvas">
+                                <canvas></canvas>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <tr class="breakfast">
+                                        <td class="percent" data-color="#02A0FC" style="--color:#02A0FC">45%</td>
+                                        <td>Завтрак</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                    <tr class="snack-1">
+                                        <td class="percent" data-color="#7FCEFB" style="--color:#7FCEFB">45%</td>
+                                        <td>Перекус 1</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                    <tr class="lanch">
+                                        <td class="percent" data-color="#D26256" style="--color:#D26256">45%</td>
+                                        <td>Обед</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                    <tr class="snack-2">
+                                        <td class="percent" data-color="#E3A098" style="--color:#E3A098">45%</td>
+                                        <td>Перекус 2</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                    <tr class="dinner">
+                                        <td class="percent" data-color="#1F74CA" style="--color:#1F74CA">45%</td>
+                                        <td>Ужин</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                    <tr class="snack-3">
+                                        <td class="percent" data-color="#B7B7B7" style="--color:#B7B7B7">45%</td>
+                                        <td>Перекус 3</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="nutrition-diagram__item" id="ptc">
+                        <div class="nutrition-diagram__item-top">
+                            <h3>Соотношение БЖУ в рационе</h3>
+                        </div>
+                        <div class="nutrition-diagram__item-bottom">
+                            <div class="canvas">
+                                <canvas></canvas>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <tr class="proteins">
+                                        <td class="percent" data-color="#02A0FC" style="--color:#02A0FC">45%</td>
+                                        <td>Белки</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                    <tr class="fats">
+                                        <td class="percent" data-color="#7FCEFB" style="--color:#7FCEFB">45%</td>
+                                        <td>Жиры</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                    <tr class="carbohydrates">
+                                        <td class="percent" data-color="#D26256" style="--color:#D26256">45%</td>
+                                        <td>Углеводы</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                    <tr class="ptc">
+                                        <td class="percent" data-color="#E3A098" style="--color:#E3A098">45%</td>
+                                        <td>Б/Ж/У</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="nutrition-diagram__item" id="carbohydrates">
+                        <div class="nutrition-diagram__item-top">
+                            <h3>Состав углеводов</h3>
+                        </div>
+                        <div class="nutrition-diagram__item-bottom">
+                            <div class="canvas">
+                                <canvas></canvas>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <tr class="sugars">
+                                        <td class="percent" data-color="#02A0FC" style="--color:#02A0FC">45%</td>
+                                        <td>Простые сахара</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                    <tr class="starch">
+                                        <td class="percent" data-color="#7FCEFB" style="--color:#7FCEFB">45%</td>
+                                        <td>Крахмал</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                    <tr class="cellulose">
+                                        <td class="percent" data-color="#D26256" style="--color:#D26256">45%</td>
+                                        <td>Клетчатка</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                    <tr class="complex-carbohydrates">
+                                        <td class="percent" data-color="#E3A098" style="--color:#E3A098">45%</td>
+                                        <td>Прочие сложные углеводы</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="nutrition-diagram__item" id="added-sugar">
+                        <div class="nutrition-diagram__item-top">
+                            <h3>Доля добавленного сахара в общей калорийности рациона</h3>
+                        </div>
+                        <div class="nutrition-diagram__item-bottom">
+                            <div class="canvas">
+                                <canvas></canvas>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <tr class="added-sugar">
+                                        <td class="percent" data-color="#02A0FC" style="--color:#02A0FC">45%</td>
+                                        <td>Добавлен-ный сахар</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                    <tr class="caloric-substances">
+                                        <td class="percent" data-color="#7FCEFB" style="--color:#7FCEFB">45%</td>
+                                        <td>Остальные калорийные вещества</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-            <div class="grid grid-2">
-                <div class="nutrition-diagram__item">
-                    <div class="nutrition-diagram__item-top">
-                        <h3>Распределение калорийности рациона по приёмам пищи</h3>
-                    </div>
-                    <div class="nutrition-diagram__item-bottom">
-                        <div class="canvas">
-                            <canvas></canvas>
-                        </div>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class="percent" data-color="red" style="--color:red">45%</td>
-                                    <td>Завтрак</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="blue" style="--color:blue">45%</td>
-                                    <td>Перекус 1</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="green" style="--color:green">45%</td>
-                                    <td>Обед</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="black" style="--color:black">45%</td>
-                                    <td>Перекус 2</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="orange" style="--color:orange">45%</td>
-                                    <td>Ужин</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="pink" style="--color:pink">45%</td>
-                                    <td>Перекус 3</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="nutrition-diagram__item">
-                    <div class="nutrition-diagram__item-top">
-                        <h3>Соотношение БЖУ в рационе</h3>
-                    </div>
-                    <div class="nutrition-diagram__item-bottom">
-                        <div class="canvas">
-                            <canvas></canvas>
-                        </div>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class="percent" data-color="red" style="--color:red">45%</td>
-                                    <td>Завтрак</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="blue" style="--color:blue">45%</td>
-                                    <td>Перекус 1</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="green" style="--color:green">45%</td>
-                                    <td>Обед</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="black" style="--color:black">45%</td>
-                                    <td>Перекус 2</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+            <div class="section__footer">
+                <div class="author">Лопаткин Йозеф Ипполитович, Нутрициолог</div>
+                <div class="page">2</div>
+            </div>
+        </div>
+    </section>
 
+    <section class="section nutrition-diagram">
+        <div class="section__container _container">
+            <div class="section__header">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
                 </div>
-                <div class="nutrition-diagram__item">
-                    <div class="nutrition-diagram__item-top">
-                        <h3>Состав углеводов</h3>
-                    </div>
-                    <div class="nutrition-diagram__item-bottom">
-                        <div class="canvas">
-                            <canvas></canvas>
-                        </div>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class="percent" data-color="red" style="--color:red">45%</td>
-                                    <td>Завтрак</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="blue" style="--color:blue">45%</td>
-                                    <td>Перекус 1</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="green" style="--color:green">45%</td>
-                                    <td>Обед</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="black" style="--color:black">45%</td>
-                                    <td>Перекус 2</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="orange" style="--color:orange">45%</td>
-                                    <td>Ужин</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="pink" style="--color:pink">45%</td>
-                                    <td>Перекус 3</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="name">Фролов Иван Андреевич, 38 лет</div>
+            </div>
+            <div class="section__body">
+                <div class="section__title">
+                    <span>Оценка фактического питания</span>
+                    <img src="img/icons/section-linear.svg" alt="">
                 </div>
-                <div class="nutrition-diagram__item">
-                    <div class="nutrition-diagram__item-top">
-                        <h3>Доля добавленного сахара в общей калорийности рациона</h3>
-                    </div>
-                    <div class="nutrition-diagram__item-bottom">
-                        <div class="canvas">
-                            <canvas></canvas>
+                <div class="grid">
+                    <div class="nutrition-diagram__item" id="omegas">
+                        <div class="nutrition-diagram__item-top">
+                            <h3>Соотношение Омега-3/Омега-6</h3>
                         </div>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class="percent" data-color="red" style="--color:red">45%</td>
-                                    <td>Завтрак</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="blue" style="--color:blue">45%</td>
-                                    <td>Перекус 1</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="green" style="--color:green">45%</td>
-                                    <td>Обед</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="black" style="--color:black">45%</td>
-                                    <td>Перекус 2</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="orange" style="--color:orange">45%</td>
-                                    <td>Ужин</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="pink" style="--color:pink">45%</td>
-                                    <td>Перекус 3</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                        <div class="nutrition-diagram__item-bottom">
+                            <div class="canvas">
+                                <canvas></canvas>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <tr class="omega-3">
+                                        <td class="percent" data-color="#02A0FC" style="--color:#02A0FC">45%</td>
+                                        <td>Омега-3</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                    <tr class="omega-3-6">
+                                        <td class="percent" data-color="#7FCEFB" style="--color:#7FCEFB">45%</td>
+                                        <td>Омега-6</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                    <tr class="omega-6">
+                                        <td class="percent" data-color="#D26256" style="--color:#D26256">45%</td>
+                                        <td>Омега-3/Омега-6</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
-                </div>
-                <div class="nutrition-diagram__item">
-                    <div class="nutrition-diagram__item-top">
-                        <h3>Соотношение Омега-3/Омега-6</h3>
                     </div>
-                    <div class="nutrition-diagram__item-bottom">
-                        <div class="canvas">
-                            <canvas></canvas>
+                    <div class="nutrition-diagram__item" id="sodium-potassium">
+                        <div class="nutrition-diagram__item-top">
+                            <h3>Соотношение Натрий/Калий</h3>
                         </div>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class="percent" data-color="red" style="--color:red">45%</td>
-                                    <td>Завтрак</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="blue" style="--color:blue">45%</td>
-                                    <td>Перекус 1</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="green" style="--color:green">45%</td>
-                                    <td>Обед</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="black" style="--color:black">45%</td>
-                                    <td>Перекус 2</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="nutrition-diagram__item-bottom">
+                            <div class="canvas">
+                                <canvas></canvas>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <tr class="sodium">
+                                        <td class="percent" data-color="#02A0FC" style="--color:#02A0FC">45%</td>
+                                        <td>Натрий</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                    <tr class="sodium-potassium">
+                                        <td class="percent" data-color="#7FCEFB" style="--color:#7FCEFB">45%</td>
+                                        <td>Калий</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                    <tr class="potassium">
+                                        <td class="percent" data-color="#D26256" style="--color:#D26256">45%</td>
+                                        <td>Натрий/Калий</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
+                    <div class="nutrition-diagram__item" id="calcium-phosphorus-magnesium">
+                        <div class="nutrition-diagram__item-top">
+                            <h3>Соотношение Кальций/Фосфор/Магний</h3>
+                        </div>
+                        <div class="nutrition-diagram__item-bottom">
+                            <div class="canvas">
+                                <canvas></canvas>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <tr class="calcium">
+                                        <td class="percent" data-color="#02A0FC" style="--color:#02A0FC">45%</td>
+                                        <td>Кальций</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                    <tr class="phosphorus">
+                                        <td class="percent" data-color="#7FCEFB" style="--color:#7FCEFB">45%</td>
+                                        <td>Фосфор</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                    <tr class="magnesium">
+                                        <td class="percent" data-color="#D26256" style="--color:#D26256">45%</td>
+                                        <td>Магний</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                    <tr class="calcium-phosphorus-magnesium">
+                                        <td class="percent" data-color="#E3A098" style="--color:#E3A098">45%</td>
+                                        <td>Кальций/Фосфор/Магний</td>
+                                        <td>893 ккал</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
-                </div>
-                <div class="nutrition-diagram__item">
-                    <div class="nutrition-diagram__item-top">
-                        <h3>Соотношение Натрий/Калий</h3>
-                    </div>
-                    <div class="nutrition-diagram__item-bottom">
-                        <div class="canvas">
-                            <canvas></canvas>
-                        </div>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class="percent" data-color="red" style="--color:red">45%</td>
-                                    <td>Завтрак</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="blue" style="--color:blue">45%</td>
-                                    <td>Перекус 1</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="green" style="--color:green">45%</td>
-                                    <td>Обед</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="black" style="--color:black">45%</td>
-                                    <td>Перекус 2</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="orange" style="--color:orange">45%</td>
-                                    <td>Ужин</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="pink" style="--color:pink">45%</td>
-                                    <td>Перекус 3</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
-                <div class="nutrition-diagram__item">
-                    <div class="nutrition-diagram__item-top">
-                        <h3>Соотношение Кальций/Фосфор/Магний</h3>
-                    </div>
-                    <div class="nutrition-diagram__item-bottom">
-                        <div class="canvas">
-                            <canvas></canvas>
-                        </div>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class="percent" data-color="red" style="--color:red">45%</td>
-                                    <td>Завтрак</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="blue" style="--color:blue">45%</td>
-                                    <td>Перекус 1</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="green" style="--color:green">45%</td>
-                                    <td>Обед</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="black" style="--color:black">45%</td>
-                                    <td>Перекус 2</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="orange" style="--color:orange">45%</td>
-                                    <td>Ужин</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                                <tr>
-                                    <td class="percent" data-color="pink" style="--color:pink">45%</td>
-                                    <td>Перекус 3</td>
-                                    <td>893 ккал</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                </div>
+            </div>
+            <div class="section__footer">
+                <div class="author">Лопаткин Йозеф Ипполитович, Нутрициолог</div>
+                <div class="page">2</div>
             </div>
         </div>
     </section>
 
     <section class="section nutrition-mass">
         <div class="section__container _container">
+            <div class="section__header">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="name">Фролов Иван Андреевич, 38 лет</div>
+            </div>
             <div class="section__body">
+                <div class="section__title">
+                    <span>Оценка фактического питания</span>
+                    <img src="img/icons/section-linear.svg" alt="">
+                </div>
                 <h3 class="nutrition-mass__title">Массовая доля групп продуктов питания в рационе</h3>
                 <div class="nutrition-mass__flex">
                     <div class="nutrition-mass__graphic">
@@ -2170,19 +2157,77 @@
                 </div>
                 <img class="nutrition-mass__img" src="img/vegetables.png" alt="">
             </div>
+            <div class="section__footer">
+                <div class="author">Лопаткин Йозеф Ипполитович, Нутрициолог</div>
+                <div class="page">2</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section nutrition-mass nutrition-mass__onlytext">
+        <div class="section__container _container">
+            <div class="section__header">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="name">Фролов Иван Андреевич, 38 лет</div>
+            </div>
+            <div class="section__body">
+                <div class="section__title">
+                    <span>Оценка фактического питания</span>
+                    <img src="img/icons/section-linear.svg" alt="">
+                </div>
+                <div class="params-item params-info large">
+                    <div class="params-item__wrap">
+                        <div class="icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48">
+                                <use xlink:href="img/svg/icons.svg#info"></use>
+                            </svg>
+                        </div>
+                        <h3>Заключение по фактическому питанию</h3>
+                        <p>Ваш фактический рацион не отвечает потребностям вашего организма. Наблюдается дефицит
+                            углеводов, избыток жиров, избыток
+                            белка. 52.4% важнейших для здоровья элементов содержатся в вашем рационе в необходимом
+                            количестве. Несмотря на это,
+                            следующие витамины и минералы поступают в недостаточном количестве: витамин A, бета-каротин,
+                            витамин D, витамин E,
+                            витамин K, витамин С, холин, витамин В5, витамин В9, кальций, железо, калий, хлор, бор, йод.
+                            В вашем фактическом рационе
+                            преобладают такие группы продуктов, как овощи и молочные продукты. Анализ состава жирных
+                            кислот показал допустимое
+                            соотношение омега-3/омега-6. Желательно повысить употребление продуктов, богатых омега-3
+                            жирными кислотами для
+                            достижения оптимального соотношения омега-3/омега-6. Вы потребляете оптимальное количество
+                            простых сахаров. В вашем
+                            рационе недостаточно клетчатки. Это снижает ваше насыщение, ухудшает пищеварение и повышает
+                            риск развития некоторых
+                            заболеваний. В целом, вы потребляете меньше калорий, чем вам требуется для вашей цели.</p>
+                    </div>
+                </div>
+                <img class="nutrition-mass__img" src="img/vegetables-2.png" alt="">
+            </div>
+            <div class="section__footer">
+                <div class="author">Лопаткин Йозеф Ипполитович, Нутрициолог</div>
+                <div class="page">2</div>
+            </div>
         </div>
     </section>
 
     <section class="section analisys">
-        <div class="section__linear">
-            <div class="_container">
-                <h2>Анализы</h2>
-            </div>
-        </div>
         <div class="section__container _container">
+            <div class="section__header">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="name">Фролов Иван Андреевич, 38 лет</div>
+            </div>
             <div class="section__body">
+                <div class="section__title">
+                    <span>Анализы</span>
+                    <img src="img/icons/section-linear.svg" alt="">
+                </div>
                 <div class="section__top _center">
-                    <h3>Показатели, имеющие отклонения</h3>
+                    <h3>Показатели, имеющие отклонения.</h3>
                     <p>Дата интерпретации: <time>20.02.2026</time></p>
                 </div>
                 <table>
@@ -2290,210 +2335,219 @@
                     </tbody>
                 </table>
             </div>
+            <div class="analisys-text">Для детальной расшифровки анализов обратитесь к врачу.</div>
+            <div class="section__footer">
+                <div class="author">Лопаткин Йозеф Ипполитович, Нутрициолог</div>
+                <div class="page">2</div>
+            </div>
         </div>
     </section>
 
     <section class="section analisys-table">
         <div class="section__container _container">
+            <div class="section__header">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="name">Фролов Иван Андреевич, 38 лет</div>
+            </div>
             <div class="section__body">
-                <div class="scroll-wrapper">
-                    <div class="scroll-wrapper__table">
-                        <div class="table">
-                            <h3>Динамика изменений</h3>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th rowspan="2">Показатель</th>
-                                        <th rowspan="2">Норма *</th>
-                                        <th colspan="7">2018</th>
-                                        <th colspan="2">2021</th>
-                                    </tr>
-                                    <tr>
-                                        <th>03.02</th>
-                                        <th>03.03</th>
-                                        <th>03.03</th>
-                                        <th>03.04</th>
-                                        <th>03.05</th>
-                                        <th>03.06</th>
-                                        <th>03.07</th>
-                                        <th>03.08</th>
-                                        <th>03.09</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Эритроциты</td>
-                                        <td>110-140 нмоль/л</td>
-                                        <td>
-                                            <img src="img/icons/arrow-red.svg" alt="">
-                                            <span>146</span>
-                                        </td>
-                                        <td>16</td>
-                                        <td>146</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Эритроциты</td>
-                                        <td>110-140 нмоль/л</td>
-                                        <td>
-                                            <img src="img/icons/arrow-red.svg" alt="">
-                                            <span>146</span>
-                                        </td>
-                                        <td>16</td>
-                                        <td>146</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Эритроциты</td>
-                                        <td>110-140 нмоль/л</td>
-                                        <td>
-                                            <img src="img/icons/arrow-red.svg" alt="">
-                                            <span>146</span>
-                                        </td>
-                                        <td>16</td>
-                                        <td>146</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Эритроциты</td>
-                                        <td>110-140 нмоль/л</td>
-                                        <td>
-                                            <img src="img/icons/arrow-red.svg" alt="">
-                                            <span>146</span>
-                                        </td>
-                                        <td>16</td>
-                                        <td>146</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Эритроциты</td>
-                                        <td>110-140 нмоль/л</td>
-                                        <td>
-                                            <img src="img/icons/arrow-red.svg" alt="">
-                                            <span>146</span>
-                                        </td>
-                                        <td>16</td>
-                                        <td>146</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Эритроциты</td>
-                                        <td>110-140 нмоль/л</td>
-                                        <td>
-                                            <img src="img/icons/arrow-red.svg" alt="">
-                                            <span>146</span>
-                                        </td>
-                                        <td>16</td>
-                                        <td>146</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="scroll-wrapper__scrollbar">
-                        <span></span>
+                <div class="section__title">
+                    <span>Анализы</span>
+                    <img src="img/icons/section-linear.svg" alt="">
+                </div>
+                <div class="table">
+                    <h3>Динамика изменений</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th rowspan="2">Показатель</th>
+                                <th rowspan="2">Норма *</th>
+                                <th colspan="7">2018</th>
+                                <th colspan="2">2021</th>
+                            </tr>
+                            <tr>
+                                <th>03.02</th>
+                                <th>03.03</th>
+                                <th>03.03</th>
+                                <th>03.04</th>
+                                <th>03.05</th>
+                                <th>03.06</th>
+                                <th>03.07</th>
+                                <th>03.08</th>
+                                <th>03.09</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Эритроциты</td>
+                                <td>110-140 нмоль/л</td>
+                                <td>
+                                    <img src="img/icons/arrow-red.svg" alt="">
+                                    <span>146</span>
+                                </td>
+                                <td>16</td>
+                                <td>146</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <td>Эритроциты</td>
+                                <td>110-140 нмоль/л</td>
+                                <td>
+                                    <img src="img/icons/arrow-red.svg" alt="">
+                                    <span>146</span>
+                                </td>
+                                <td>16</td>
+                                <td>146</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <td>Эритроциты</td>
+                                <td>110-140 нмоль/л</td>
+                                <td>
+                                    <img src="img/icons/arrow-red.svg" alt="">
+                                    <span>146</span>
+                                </td>
+                                <td>16</td>
+                                <td>146</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <td>Эритроциты</td>
+                                <td>110-140 нмоль/л</td>
+                                <td>
+                                    <img src="img/icons/arrow-red.svg" alt="">
+                                    <span>146</span>
+                                </td>
+                                <td>16</td>
+                                <td>146</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <td>Эритроциты</td>
+                                <td>110-140 нмоль/л</td>
+                                <td>
+                                    <img src="img/icons/arrow-red.svg" alt="">
+                                    <span>146</span>
+                                </td>
+                                <td>16</td>
+                                <td>146</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <td>Эритроциты</td>
+                                <td>110-140 нмоль/л</td>
+                                <td>
+                                    <img src="img/icons/arrow-red.svg" alt="">
+                                    <span>146</span>
+                                </td>
+                                <td>16</td>
+                                <td>146</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table">
+                    <h3>График изменения показателя «Гемоглобин»</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th rowspan="2">Показатель</th>
+                                <th rowspan="2">Норма *</th>
+                                <th colspan="7">2018</th>
+                                <th colspan="2">2021</th>
+                            </tr>
+                            <tr>
+                                <th>03.02</th>
+                                <th>03.03</th>
+                                <th>03.03</th>
+                                <th>03.04</th>
+                                <th>03.05</th>
+                                <th>03.06</th>
+                                <th>03.07</th>
+                                <th>03.08</th>
+                                <th>03.09</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Эритроциты</td>
+                                <td>110-140 нмоль/л</td>
+                                <td>
+                                    <img src="img/icons/arrow-red.svg" alt="">
+                                    <span>146</span>
+                                </td>
+                                <td>16</td>
+                                <td>146</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                                <td>16</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="analisys-table__graphic">
+                        <canvas></canvas>
                     </div>
                 </div>
-
-
-                <div class="scroll-wrapper">
-                    <div class="scroll-wrapper__table">
-                        <div class="table">
-                            <h3>График изменения показателя «Гемоглобин»</h3>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th rowspan="2">Показатель</th>
-                                        <th rowspan="2">Норма *</th>
-                                        <th colspan="7">2018</th>
-                                        <th colspan="2">2021</th>
-                                    </tr>
-                                    <tr>
-                                        <th>03.02</th>
-                                        <th>03.03</th>
-                                        <th>03.03</th>
-                                        <th>03.04</th>
-                                        <th>03.05</th>
-                                        <th>03.06</th>
-                                        <th>03.07</th>
-                                        <th>03.08</th>
-                                        <th>03.09</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Эритроциты</td>
-                                        <td>110-140 нмоль/л</td>
-                                        <td>
-                                            <img src="img/icons/arrow-red.svg" alt="">
-                                            <span>146</span>
-                                        </td>
-                                        <td>16</td>
-                                        <td>146</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                        <td>16</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="analisys-table__graphic">
-                                <canvas></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="scroll-wrapper__scrollbar">
-                        <span></span>
-                    </div>
-                </div>
-
-                <div class="analisys-table__text">
-                    * Нормальные значения показателей могут отличаться, в зависимости от лаборатории, выполнившей
-                    анализ. Требуется
-                    консультация специалиста.
-                </div>
+            </div>
+            <div class="analisys-table__text">
+                * Нормальные значения показателей могут отличаться, в зависимости от лаборатории, выполнившей
+                анализ. Требуется
+                консультация специалиста.
+            </div>
+            <div class="section__footer">
+                <div class="author">Лопаткин Йозеф Ипполитович, Нутрициолог</div>
+                <div class="page">2</div>
             </div>
         </div>
     </section>
 
     <section class="section analisys-tests">
         <div class="section__container _container">
+            <div class="section__header">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="name">Фролов Иван Андреевич, 38 лет</div>
+            </div>
             <div class="section__body">
-                <div class="section__top _center">
-                    <h3>Рекомендуемые исследования</h3>
+                <div class="section__title">
+                    <span>Рекомендуемые исследования</span>
+                    <img src="img/icons/section-linear.svg" alt="">
                 </div>
                 <div class="grid">
                     <div class="analisys-tests__item">
@@ -2570,17 +2624,26 @@
                     </div>
                 </div>
             </div>
+            <div class="section__footer">
+                <div class="author">Лопаткин Йозеф Ипполитович, Нутрициолог</div>
+                <div class="page">2</div>
+            </div>
         </div>
     </section>
 
     <section class="section conclusion">
-        <div class="section__linear">
-            <div class="_container">
-                <h2>Заключение и рекомендуемые исследования</h2>
-            </div>
-        </div>
         <div class="section__container _container">
+            <div class="section__header">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="name">Фролов Иван Андреевич, 38 лет</div>
+            </div>
             <div class="section__body">
+                <div class="section__title">
+                    <span>Заключение и рекомендуемые исследования</span>
+                    <img src="img/icons/section-linear.svg" alt="">
+                </div>
                 <div class="grid">
                     <div class="analisys-tests__item">
                         <label><b>Предварительный диагноз</b></label>
@@ -2676,17 +2739,26 @@
                     </div>
                 </div>
             </div>
+            <div class="section__footer">
+                <div class="author">Лопаткин Йозеф Ипполитович, Нутрициолог</div>
+                <div class="page">2</div>
+            </div>
         </div>
     </section>
 
     <section class="section conclusion">
-        <div class="section__linear">
-            <div class="_container">
-                <h2>Контрольные исследования</h2>
-            </div>
-        </div>
         <div class="section__container _container">
+            <div class="section__header">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="name">Фролов Иван Андреевич, 38 лет</div>
+            </div>
             <div class="section__body">
+                <div class="section__title">
+                    <span>Контрольные исследования</span>
+                    <img src="img/icons/section-linear.svg" alt="">
+                </div>
                 <div class="grid">
                     <div class="analisys-tests__item">
                         <div>
@@ -2759,17 +2831,26 @@
                     </div>
                 </div>
             </div>
+            <div class="section__footer">
+                <div class="author">Лопаткин Йозеф Ипполитович, Нутрициолог</div>
+                <div class="page">2</div>
+            </div>
         </div>
     </section>
 
     <section class="section risks">
-        <div class="section__linear">
-            <div class="_container">
-                <h2>Риски развития алиментарных заболеваний</h2>
-            </div>
-        </div>
         <div class="section__container _container">
+            <div class="section__header">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="name">Фролов Иван Андреевич, 38 лет</div>
+            </div>
             <div class="section__body">
+                <div class="section__title">
+                    <span>Риски развития алиментарных заболеваний</span>
+                    <img src="img/icons/section-linear.svg" alt="">
+                </div>
                 <div class="text-accent italic">
                     <p>Некоторые заболевания могут развиваться или усугубляться по причине несбалансированного питания.
                         Это так называемые
@@ -2814,21 +2895,30 @@
                         </div>
                     </div>
                 </div>
-                <div class="risks-text">
-                    *Информация не является окончательным диагнозом. Требуется консультация специалиста.
-                </div>
+            </div>
+            <div class="risks-text">
+                *Информация не является окончательным диагнозом. Требуется консультация специалиста.
+            </div>
+            <div class="section__footer">
+                <div class="author">Лопаткин Йозеф Ипполитович, Нутрициолог</div>
+                <div class="page">2</div>
             </div>
         </div>
     </section>
 
     <section class="section final-conclusions">
-        <div class="section__linear">
-            <div class="_container">
-                <h2>Итоговые заключения</h2>
-            </div>
-        </div>
         <div class="section__container _container">
+            <div class="section__header">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="name">Фролов Иван Андреевич, 38 лет</div>
+            </div>
             <div class="section__body">
+                <div class="section__title">
+                    <span>Итоговые заключения</span>
+                    <img src="img/icons/section-linear.svg" alt="">
+                </div>
                 <div class="params-item params-info large">
                     <div class="params-item__wrap">
                         <div class="icon">
@@ -2855,17 +2945,27 @@
                     </div>
                 </div>
             </div>
+            <div class="section__footer">
+                <div class="author">Лопаткин Йозеф Ипполитович, Нутрициолог</div>
+                <div class="page">2</div>
+            </div>
         </div>
+        <img class="final-conclusions__img" src="img/final-conclusions.png" alt="">
     </section>
 
     <section class="section nutritional-value" data-tabs-area>
-        <div class="section__linear">
-            <div class="_container">
-                <h2>Пищевая ценность рекомендуемого рациона</h2>
-            </div>
-        </div>
         <div class="section__container _container">
+            <div class="section__header">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="name">Фролов Иван Андреевич, 38 лет</div>
+            </div>
             <div class="section__body">
+                <div class="section__title">
+                    <span>Пищевая ценность рекомендуемого рациона</span>
+                    <img src="img/icons/section-linear.svg" alt="">
+                </div>
                 <div class="section__top">
                     <div class="tabs">
                         <button data-tab="1" class="_active">Неделя 1</button>
@@ -3228,12 +3328,26 @@
                     </div>
                 </div>
             </div>
+            <div class="section__footer">
+                <div class="author">Лопаткин Йозеф Ипполитович, Нутрициолог</div>
+                <div class="page">2</div>
+            </div>
         </div>
     </section>
 
     <section class="section nutritional-value__graphic" data-tabs-area>
         <div class="section__container _container">
+            <div class="section__header">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="name">Фролов Иван Андреевич, 38 лет</div>
+            </div>
             <div class="section__body">
+                <div class="section__title">
+                    <span>Пищевая ценность рекомендуемого рациона</span>
+                    <img src="img/icons/section-linear.svg" alt="">
+                </div>
                 <div class="section__top">
                     <div class="tabs">
                         <button data-tab="1" class="_active">Неделя 1</button>
@@ -3252,37 +3366,38 @@
                 </div>
                 <div class="tabs-content">
                     <div data-tab-content="1" class="_active">
-                        <div class="grid grid-2">
-                            <div class="nutrition-diagram__item">
+                        <div class="grid">
+                            <div class="nutrition-diagram__item" id="carbohydrates">
                                 <div class="nutrition-diagram__item-top">
                                     <h3>Состав углеводов</h3>
                                 </div>
                                 <div class="nutrition-diagram__item-bottom">
                                     <div class="canvas">
                                         <canvas></canvas>
-                                        <svg>
-                                            <circle class="circle-background"></circle>
-                                        </svg>
                                     </div>
                                     <table>
                                         <tbody>
-                                            <tr>
-                                                <td class="percent" data-color="red" style="--color:red">45%</td>
+                                            <tr class="sugars">
+                                                <td class="percent" data-color="#02A0FC" style="--color:#02A0FC">45%
+                                                </td>
                                                 <td>Простые сахара</td>
                                                 <td>893 ккал</td>
                                             </tr>
-                                            <tr>
-                                                <td class="percent" data-color="blue" style="--color:blue">45%</td>
+                                            <tr class="starch">
+                                                <td class="percent" data-color="#7FCEFB" style="--color:#7FCEFB">45%
+                                                </td>
                                                 <td>Крахмал</td>
                                                 <td>893 ккал</td>
                                             </tr>
-                                            <tr>
-                                                <td class="percent" data-color="green" style="--color:green">45%</td>
+                                            <tr class="cellulose">
+                                                <td class="percent" data-color="#D26256" style="--color:#D26256">45%
+                                                </td>
                                                 <td>Клетчатка</td>
                                                 <td>893 ккал</td>
                                             </tr>
-                                            <tr>
-                                                <td class="percent" data-color="black" style="--color:black">45%</td>
+                                            <tr class="complex-carbohydrates">
+                                                <td class="percent" data-color="#E3A098" style="--color:#E3A098">45%
+                                                </td>
                                                 <td>Прочие сложные углеводы</td>
                                                 <td>893 ккал</td>
                                             </tr>
@@ -3290,31 +3405,31 @@
                                     </table>
                                 </div>
                             </div>
-                            <div class="nutrition-diagram__item">
+                            <div class="nutrition-diagram__item" id="omegas">
                                 <div class="nutrition-diagram__item-top">
                                     <h3>Соотношение Омега-3/Омега-6</h3>
                                 </div>
                                 <div class="nutrition-diagram__item-bottom">
                                     <div class="canvas">
                                         <canvas></canvas>
-                                        <svg>
-                                            <circle class="circle-background"></circle>
-                                        </svg>
                                     </div>
                                     <table>
                                         <tbody>
-                                            <tr>
-                                                <td class="percent" data-color="red" style="--color:red">45%</td>
+                                            <tr class="omega-3">
+                                                <td class="percent" data-color="#02A0FC" style="--color:#02A0FC">45%
+                                                </td>
                                                 <td>Омега-3</td>
                                                 <td>893 ккал</td>
                                             </tr>
-                                            <tr>
-                                                <td class="percent" data-color="blue" style="--color:blue">45%</td>
+                                            <tr class="omega-3-6">
+                                                <td class="percent" data-color="#7FCEFB" style="--color:#7FCEFB">45%
+                                                </td>
                                                 <td>Омега-6</td>
                                                 <td>893 ккал</td>
                                             </tr>
-                                            <tr>
-                                                <td class="percent" data-color="green" style="--color:green">45%</td>
+                                            <tr class="omega-6">
+                                                <td class="percent" data-color="#D26256" style="--color:#D26256">45%
+                                                </td>
                                                 <td>Омега-3/Омега-6</td>
                                                 <td>893 ккал</td>
                                             </tr>
@@ -3331,17 +3446,26 @@
                     <div data-tab-content="5"></div>
                 </div>
             </div>
+            <div class="section__footer">
+                <div class="author">Лопаткин Йозеф Ипполитович, Нутрициолог</div>
+                <div class="page">2</div>
+            </div>
         </div>
     </section>
 
     <section class="section nutrition-plan" data-tabs-area>
-        <div class="section__linear">
-            <div class="_container">
-                <h2>Ваш персональный план питания</h2>
-            </div>
-        </div>
         <div class="section__container _container">
+            <div class="section__header">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="name">Фролов Иван Андреевич, 38 лет</div>
+            </div>
             <div class="section__body">
+                <div class="section__title">
+                    <span>Ваш персональный план питания</span>
+                    <img src="img/icons/section-linear.svg" alt="">
+                </div>
                 <div class="tabs">
                     <button data-tab="1" class="_active">Неделя 1</button>
                     <button data-tab="2">Неделя 2</button>
@@ -3430,7 +3554,6 @@
                                     </tbody>
                                 </table>
                             </div>
-
                             <div class="nutrition-plan__total">
                                 <h3>Итого:</h3>
                                 <div class="grid grid-3">
@@ -3532,6 +3655,10 @@
                     <img src="img/nutrition-plan.png" alt="">
                 </div>
             </div>
+            <div class="section__footer">
+                <div class="author">Лопаткин Йозеф Ипполитович, Нутрициолог</div>
+                <div class="page">2</div>
+            </div>
         </div>
     </section>
 
@@ -3539,13 +3666,18 @@
         <div class="shopping-list__img">
             <img src="img/shopping-list.png" alt="">
         </div>
-        <div class="section__linear">
-            <div class="_container">
-                <h2>Список продуктов для покупок</h2>
-            </div>
-        </div>
         <div class="section__container _container">
+            <div class="section__header">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="name">Фролов Иван Андреевич, 38 лет</div>
+            </div>
             <div class="section__body">
+                <div class="section__title">
+                    <span>Список продуктов для покупок</span>
+                    <img src="img/icons/section-linear.svg" alt="">
+                </div>
                 <div class="tabs">
                     <button data-tab="1" class="_active">Неделя 1</button>
                     <button data-tab="2">Неделя 2</button>
@@ -3562,230 +3694,7 @@
                             <button data-tab="1-7">День 7</button>
                         </div>
                         <div data-tab-content="1-1" class="_active">
-                            <div class="grid grid-3">
-                                <ol class="shopping-list__item">
-                                    <li>
-                                        <div>
-                                            <svg width="18" height="19" viewBox="0 0 18 19">
-                                                <use xlink:href='img/svg/icons.svg#vegetables' />
-                                            </svg>
-                                            <label>Овощи, грибы и зелень</label>
-                                        </div>
-                                        <p>
-                                            <span>Помидоры</span>
-                                            <span>100 г</span>
-                                        </p>
-                                        <p>
-                                            <span>Огурцы</span>
-                                            <span>100 г</span>
-                                        </p>
-                                        <p>
-                                            <span>Петрушка, панированная в сухарях</span>
-                                            <span>100 г</span>
-                                        </p>
-                                        <p>
-                                            <span>Огурцы</span>
-                                            <span>100 г</span>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <svg width="18" height="19" viewBox="0 0 18 19">
-                                                <use xlink:href='img/svg/icons.svg#fruits' />
-                                            </svg>
-                                            <label>Фрукты и ягоды</label>
-                                        </div>
-                                        <p>
-                                            <span>Помидоры</span>
-                                            <span>100 г</span>
-                                        </p>
-                                        <p>
-                                            <span>Огурцы</span>
-                                            <span>100 г</span>
-                                        </p>
-                                        <p>
-                                            <span>Петрушка, панированная в сухарях</span>
-                                            <span>100 г</span>
-                                        </p>
-                                        <p>
-                                            <span>Огурцы</span>
-                                            <span>100 г</span>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <svg width="18" height="19" viewBox="0 0 18 19">
-                                                <use xlink:href='img/svg/icons.svg#cereals-2' />
-                                            </svg>
-                                            <label>Крупы и бобовые</label>
-                                        </div>
-                                        <p>
-                                            <span>Помидоры</span>
-                                            <span>100 г</span>
-                                        </p>
-                                        <p>
-                                            <span>Огурцы</span>
-                                            <span>100 г</span>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <svg width="18" height="19" viewBox="0 0 18 19">
-                                                <use xlink:href='img/svg/icons.svg#pasta' />
-                                            </svg>
-                                            <label>Макароны и мука</label>
-                                        </div>
-                                        <p>
-                                            <span>Помидоры</span>
-                                            <span>100 г</span>
-                                        </p>
-                                        <p>
-                                            <span>Огурцы</span>
-                                            <span>100 г</span>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <svg width="18" height="19" viewBox="0 0 18 19">
-                                                <use xlink:href='img/svg/icons.svg#bread' />
-                                            </svg>
-                                            <label>Хлеб и выпечка</label>
-                                        </div>
-                                        <p>
-                                            <span>Помидоры</span>
-                                            <span>100 г</span>
-                                        </p>
-                                        <p>
-                                            <span>Огурцы</span>
-                                            <span>100 г</span>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <svg width="18" height="19" viewBox="0 0 18 19">
-                                                <use xlink:href='img/svg/icons.svg#milk' />
-                                            </svg>
-                                            <label>Молочные продукты и яйца</label>
-                                        </div>
-                                        <p>
-                                            <span>Помидоры</span>
-                                            <span>100 г</span>
-                                        </p>
-                                        <p>
-                                            <span>Огурцы</span>
-                                            <span>100 г</span>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <svg width="18" height="19" viewBox="0 0 18 19">
-                                                <use xlink:href='img/svg/icons.svg#meet' />
-                                            </svg>
-                                            <label>Мясо, птица и субпродукты</label>
-                                        </div>
-                                        <p>
-                                            <span>Помидоры</span>
-                                            <span>100 г</span>
-                                        </p>
-                                        <p>
-                                            <span>Огурцы</span>
-                                            <span>100 г</span>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <svg width="18" height="19" viewBox="0 0 18 19">
-                                                <use xlink:href='img/svg/icons.svg#fish' />
-                                            </svg>
-                                            <label>Рыба и морепродукты</label>
-                                        </div>
-                                        <p>
-                                            <span>Помидоры</span>
-                                            <span>100 г</span>
-                                        </p>
-                                        <p>
-                                            <span>Огурцы</span>
-                                            <span>100 г</span>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <svg width="18" height="19" viewBox="0 0 18 19">
-                                                <use xlink:href='img/svg/icons.svg#nuts' />
-                                            </svg>
-                                            <label>Орехи и сухофрукты</label>
-                                        </div>
-                                        <p>
-                                            <span>Помидоры</span>
-                                            <span>100 г</span>
-                                        </p>
-                                        <p>
-                                            <span>Огурцы</span>
-                                            <span>100 г</span>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <svg width="18" height="19" viewBox="0 0 18 19">
-                                                <use xlink:href='img/svg/icons.svg#sausages' />
-                                            </svg>
-                                            <label>Колбасы и деликатесы</label>
-                                        </div>
-                                        <p>
-                                            <span>Помидоры</span>
-                                            <span>100 г</span>
-                                        </p>
-                                        <p>
-                                            <span>Огурцы</span>
-                                            <span>100 г</span>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <svg width="18" height="19" viewBox="0 0 18 19">
-                                                <use xlink:href='img/svg/icons.svg#canned' />
-                                            </svg>
-                                            <label>Консервы</label>
-                                        </div>
-                                        <p>
-                                            <span>Помидоры</span>
-                                            <span>100 г</span>
-                                        </p>
-                                        <p>
-                                            <span>Огурцы</span>
-                                            <span>100 г</span>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <svg width="18" height="19" viewBox="0 0 18 19">
-                                                <use xlink:href='img/svg/icons.svg#drinks' />
-                                            </svg>
-                                            <label>Напитки</label>
-                                        </div>
-                                        <p>
-                                            <span>Помидоры</span>
-                                            <span>100 г</span>
-                                        </p>
-                                        <p>
-                                            <span>Огурцы</span>
-                                            <span>100 г</span>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <label>Также понадобится</label>
-                                        </div>
-                                        <p>
-                                            <span>Помидоры</span>
-                                            <span>100 г</span>
-                                        </p>
-                                        <p>
-                                            <span>Огурцы</span>
-                                            <span>100 г</span>
-                                        </p>
-                                    </li>
-                                </ol>
+                            <div class="grid grid-2">
                                 <ol class="shopping-list__item">
                                     <li>
                                         <div>
@@ -4261,6 +4170,10 @@
                     </div>
                 </div>
             </div>
+            <div class="section__footer">
+                <div class="author">Лопаткин Йозеф Ипполитович, Нутрициолог</div>
+                <div class="page">2</div>
+            </div>
         </div>
     </section>
 
@@ -4268,13 +4181,18 @@
         <div class="recepies-img">
             <img src="img/recepies.png" alt="">
         </div>
-        <div class="section__linear">
-            <div class="_container">
-                <h2>Рецепты</h2>
-            </div>
-        </div>
         <div class="section__container _container">
+            <div class="section__header">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="name">Фролов Иван Андреевич, 38 лет</div>
+            </div>
             <div class="section__body">
+                <div class="section__title">
+                    <span>Рецепты</span>
+                    <img src="img/icons/section-linear.svg" alt="">
+                </div>
                 <div class="section__top">
                     <div class="tabs">
                         <button data-tab="1" class="_active">Неделя 1</button>
@@ -4417,17 +4335,30 @@
                     <div data-tab-content="5"></div>
                 </div>
             </div>
+            <div class="section__footer">
+                <div class="author">Лопаткин Йозеф Ипполитович, Нутрициолог</div>
+                <div class="page">2</div>
+            </div>
         </div>
     </section>
 
     <section class="contacts">
-        <div class="section__linear">
-            <div class="_container">
-                <h2>Контакты</h2>
-            </div>
+        <div class="contacts__bgi">
+            <img src="img/hero.png" alt="">
         </div>
+
         <div class="contacts__container _container">
+            <div class="section__header">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="name">Фролов Иван Андреевич, 38 лет</div>
+            </div>
             <div class="contacts__body">
+                <div class="section__title">
+                    <span>Контакты</span>
+                    <img src="img/icons/section-linear.svg" alt="">
+                </div>
                 <h3>Ваш персональный отчёт создан в клинике «Рассвет»</h3>
                 <div class="contacts__content">
                     <p>Об учреждении:</p>
@@ -4472,14 +4403,19 @@
                         <img src="img/contacts.png" alt="">
                     </div>
                 </div>
-                <div class="contacts__text">
-                    *Информация, содержащаяся в этом документе, не заменяет и не отменяет прошлые, настоящие и будущие
-                    рекомендации и
-                    медицинские назначения, если иное не указано вашим лечащим врачом.
-                </div>
+            </div>
+            <div class="contacts__text">
+                *Информация, содержащаяся в этом документе, не заменяет и не отменяет прошлые, настоящие и будущие
+                рекомендации и
+                медицинские назначения, если иное не указано вашим лечащим врачом.
+            </div>
+            <div class="section__footer">
+                <div class="author">Лопаткин Йозеф Ипполитович, Нутрициолог</div>
+                <div class="page">2</div>
             </div>
         </div>
     </section>
 
 </main>
+
 @@include('./html/scripts.html')
