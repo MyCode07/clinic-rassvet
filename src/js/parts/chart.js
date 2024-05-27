@@ -82,7 +82,7 @@ if (chartsMassGraphic) {
     let icons = []
     let percents = []
     chartsMassGraphicList.forEach(item => {
-        icons.push(`img/icons/${item.dataset.icon}`)
+        icons.push(`${item.dataset.icon}`)
         percents.push(+item.dataset.percent)
     });
 
