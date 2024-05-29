@@ -25,6 +25,8 @@ if (nurtCharts.length) {
             options: {
                 cutout: '80%',
                 borderRadius: borderRadius,
+                responsive: true,
+                maintainAspectRatio: true,
             },
         };
 
@@ -64,6 +66,8 @@ if (charts.length) {
             options: {
                 cutout: '80%',
                 borderRadius: 20,
+                responsive: true,
+                maintainAspectRatio: true,
             }
         };
 
@@ -124,6 +128,8 @@ if (chartsMassGraphic) {
         options: {
             // animations: false
             cutout: '60%',
+            responsive: true,
+            maintainAspectRatio: true,
         },
         plugins: [segmentImage]
     };
@@ -160,7 +166,8 @@ if (analisysTable) {
         type: 'line',
         data: data,
         options: {
-            maintainAspectRatio: false,
+            responsive: true,
+            maintainAspectRatio: true,
             scales: {
                 x: {
                     offset: true,
@@ -201,3 +208,4 @@ if (analisysTable) {
         config
     );
 }
+

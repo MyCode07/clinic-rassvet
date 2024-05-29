@@ -986,6 +986,18 @@
                 }
             }
         }
+
+        // .analisys-table__graphic
+
+        &__graphic canvas {
+            max-width: 100%;
+        }
+    }
+
+    .tabs .day {
+        color: $blue;
+        background-color: $white;
+        margin-bottom: 40px;
     }
 
     .final-conclusions {
@@ -1047,6 +1059,8 @@
         // .shopping-list__item
 
         &__item {
+            height: fit-content;
+
             & > :not(:last-child) {
                 margin-bottom: 14px;
             }
@@ -1068,6 +1082,10 @@
         }
     }
 
+    .recepies .tabs .day {
+        margin-bottom: 0;
+    }
+
     .recepies-item {
         // .recepies-item__top
 
@@ -1087,10 +1105,15 @@
 
                 thead {
                     font-size: 13px;
+                    margin-bottom: 9px;
                 }
 
                 tbody {
                     font-size: 12px;
+                }
+
+                tbody > :not(:last-child) {
+                    margin-bottom: 6px;
                 }
             }
         }
@@ -1098,6 +1121,8 @@
         // .recepies-item__img
 
         &__img {
+            width: 160px;
+            height: 160px;
         }
 
         // .recepies-item__text
@@ -1183,5 +1208,10 @@
                 }
             }
         }
+    }
+
+    canvas {
+        max-width: 100%;
+        max-height: 100%;
     }
 }
