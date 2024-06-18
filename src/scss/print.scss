@@ -1,3 +1,8 @@
+.page-pdf {
+    display: none !important;
+    visibility: hidden !important;
+}
+
 @media print {
     .page-web {
         display: none !important;
@@ -7,6 +12,11 @@
     ._web {
         display: none !important;
         visibility: hidden;
+    }
+
+    .page-pdf {
+        display: block !important;
+        visibility: unset !important;
     }
 
     body {
@@ -136,6 +146,10 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+            }
+
+            ._container {
+                height: auto;
             }
 
             .date {
@@ -1030,6 +1044,8 @@
         // .nutrition-plan__item
 
         &__item {
+            margin-bottom: 0;
+
             display: flex;
 
             table {

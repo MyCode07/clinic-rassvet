@@ -855,6 +855,10 @@
                     line-height: normal;
                 }
             }
+
+            & > div {
+                min-width: 12%;
+            }
         }
     }
 
@@ -1667,9 +1671,13 @@
     @include adaptive-value("padding-bottom", 96, 38, 1);
     margin-bottom: 0;
 
-    .tabs-content .tabs {
-        @include adaptive-value("margin-top", 20, 12, 1);
-        @include adaptive-value("margin-bottom", 40, 27, 1);
+    .tabs-content {
+        margin-top: 40px;
+
+        .tabs {
+            @include adaptive-value("margin-top", 20, 12, 1);
+            @include adaptive-value("margin-bottom", 40, 27, 1);
+        }
     }
 
     .grid {
