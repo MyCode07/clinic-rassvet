@@ -1,3 +1,4 @@
+import "./parts/print.js";
 import "./parts/chart.js";
 import "./parts/tabs.js";
 import "./parts/menu.js";
