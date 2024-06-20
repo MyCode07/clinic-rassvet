@@ -1,22 +1,24 @@
 .page-pdf {
-    display: none !important;
-    visibility: hidden !important;
+    width: 0;
+    height: 0;
+    visibility: hidden;
 }
 
 @media print {
-    .page-web {
-        display: none !important;
-        visibility: hidden;
+    @page {
+        margin: 0;
     }
 
+    .page-web,
     ._web {
         display: none !important;
-        visibility: hidden;
+        visibility: hidden !important;
     }
 
     .page-pdf {
-        display: block !important;
-        visibility: unset !important;
+        width: auto;
+        height: auto;
+        visibility: unset;
     }
 
     body {

@@ -1001,7 +1001,7 @@
     // .nutrition-mass__list
 
     &__list {
-        max-width: 427px;
+        max-width: 440px;
         flex: 1 1 auto;
 
         @media (max-width: 768px) {
@@ -1027,6 +1027,9 @@
 
                 @include adaptive-value("font-size", 20, 10, 1);
 
+                display: grid;
+                grid-template-columns: auto 1fr 0.3fr 0.5fr;
+
                 svg,
                 img {
                     width: 20px;
@@ -1045,7 +1048,6 @@
                 }
 
                 & > :nth-child(3) {
-                    width: 2em;
                     white-space: nowrap;
 
                     @media (max-width: 768px) {
@@ -1054,7 +1056,7 @@
                 }
 
                 & > :nth-child(4) {
-                    width: 3em;
+                    text-align: right;
                     white-space: nowrap;
                 }
             }

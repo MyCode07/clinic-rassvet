@@ -35,6 +35,8 @@ if (nurtCharts.length) {
             canvas,
             config
         );
+
+        //updateChart(myChart)
     })
 }
 
@@ -76,6 +78,7 @@ if (charts.length) {
             canvas,
             config
         );
+        //updateChart(myChart)
     })
 }
 
@@ -141,6 +144,7 @@ if (nutritionMassSections.length) {
                 chartsMassGraphic,
                 config
             );
+            //updateChart(myChart)
         }
     })
 }
@@ -149,8 +153,6 @@ const analisysTableSections = document.querySelectorAll('section.analisys-table'
 if (analisysTableSections.length) {
     analisysTableSections.forEach(section => {
         const analisysTable = section.querySelector('.analisys-table__graphic canvas');
-        console.log(analisysTable);
-
         if (analisysTable) {
             const data = {
                 labels: ['03.01', '03.02', '03.03', '03.04', '03.05', '03.06', '03.07', '03.08', '03.09', '03.10', '03.11', '03.12'],
@@ -217,6 +219,14 @@ if (analisysTableSections.length) {
                 canvas,
                 config
             );
+            //updateChart(myChart)
         }
+    })
+}
+
+
+function updateChart(chart) {
+    window.addEventListener('beforeprint', () => {
+        chart.update('none')
     })
 }
